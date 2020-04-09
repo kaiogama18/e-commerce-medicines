@@ -1,7 +1,7 @@
 function Search() {
   return (
-    <form className="flex shadow-lg">
-      <button class="material-icons bg-default text-white font-bold py-1 px-2 rounded-l-md">
+    <form className="flex shadow-lg mb-5 mx-5">
+      <button className="material-icons bg-default text-white font-bold py-1 px-2 rounded-l-md">
         search
       </button>
       <input
