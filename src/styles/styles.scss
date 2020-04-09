@@ -1,0 +1,35 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Vibur);
+$grey: #3e3e3e;
+$text_color_default: $grey;
+
+$color-default: #23234a;
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.0625rem;
+  color: $text_color_default;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-default {
+  background-color: $color-default;
+}
+
+.border-default {
+  border-color: $color-default;
+}
