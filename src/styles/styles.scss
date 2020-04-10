@@ -7,7 +7,6 @@
 @import url(https://fonts.googleapis.com/css?family=Vibur);
 $grey: #3e3e3e;
 $text_color_default: $grey;
-
 $color-default: #23234a;
 
 html,
@@ -32,4 +31,10 @@ main {
 
 .border-default {
   border-color: $color-default;
+}
+
+.shadow-teal-400 {
+  box-shadow: 0 10px 15px -3px rgba(136, 224, 215, 0.47),
+    0 4px 6px -2px rgba(79, 209, 197, 0.34);
+  // box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
 }
