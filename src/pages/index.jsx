@@ -3,6 +3,7 @@ import Search from "../components/search";
 import Category from "../components/category";
 import Banner from "../components/banner";
 import Delivery from "../components/delivery";
+import Card from "../components/card";
 
 class Index extends React.Component {
   render() {
@@ -19,9 +20,10 @@ class Index extends React.Component {
           <Banner />
           <Delivery />
           <div className="mx-4">
-            <p className="text-center">
+            <p className="text-center mb-5">
               <a className="text-teal-500">{data.tile}</a> {data.subtitle}
             </p>
+            <Card />
           </div>
         </div>
       </Layout>
