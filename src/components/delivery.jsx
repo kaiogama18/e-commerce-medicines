@@ -6,7 +6,7 @@ const Delivery = () => {
   };
 
   return (
-    <section className="flex flex-col p-3 overflow-hidden items-center text-center bg-default">
+    <section className="flex flex-col p-3 overflow-hidden items-center text-center bg-default mb-5">
       <p className="mt-2 text-xs text-white font-bold uppercase">
         {" "}
         {data.tile}{" "}

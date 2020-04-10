@@ -5,7 +5,7 @@ function Categorys(props) {
         key={aux.id}
         className="flex flex-col mx-2 items-center justify-center"
       >
-        <div className="flex w-16 h-16 rounded-full  border-2 border-teal-400 bg-white shadow-teal-400">
+        <div className="flex w-16 h-16 rounded-full border-2 border-teal-400 bg-white shadow-teal-400">
           <img src={aux.src} alt={aux.name} />
         </div>
         <p className="mt-2 text-xs uppercase">{aux.name}</p>
