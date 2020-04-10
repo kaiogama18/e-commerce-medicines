@@ -2,7 +2,7 @@ function CardProduct(props) {
   return props.product.map((aux) => {
     const btn = "Saiba Mais";
     return (
-      <div className="flex flex-col max-w-mdrounded overflow-hidden items-center text-center">
+      <div key={aux.id} className="flex flex-col max-w-mdrounded overflow-hidden items-center text-center">
         <img className="w-32" src={aux.src} alt={aux.name} />
         <div className="py-4">
           <p className="text-sm font-bold mb-2"> {aux.name} </p>
