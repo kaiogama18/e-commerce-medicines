@@ -28,26 +28,26 @@ class Card extends React.Component {
       {
         id: "001",
         name: "Desodorante Colônia",
-        src: "/suplementos.png",
-        price: "10,10",
+        src: "/img_card.jpg",
+        price: "49,90",
       },
       {
         id: "002",
         name: "Desodorante Colônia",
-        src: "/suplementos.png",
-        price: "10,10",
+        src: "/img_card.jpg",
+        price: "49,90",
       },
       {
         id: "003",
         name: "Desodorante Colônia",
-        src: "/suplementos.png",
-        price: "10,10",
+        src: "/img_card.jpg",
+        price: "49,90",
       },
       {
         id: "004",
         name: "Desodorante Colônia",
-        src: "/suplementos.png",
-        price: "10,10",
+        src: "/img_card.jpg",
+        price: "49,90",
       },
     ];
 
