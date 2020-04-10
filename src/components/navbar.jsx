@@ -1,18 +1,25 @@
 class Navbar extends React.Component {
   render() {
+    const data = {
+      logo_src: "/logo-Wedo-mini.png",
+      logo_name: "WEDO MARKET",
+      menu_hamburguer: "menu",
+      shopping_cart: "shopping_basket",
+    };
+
     return (
-      <nav className="flex justify-between overflow-hidden h-16 bg-default px-6">
+      <nav className="flex justify-between overflow-hidden h-16 bg-default shadow-xl px-6">
         <div className="flex items-center">
           <button className="material-icons bg-transparent text-white ounded-full h-10 w-10">
-            menu
+            {data.menu_hamburguer}
           </button>
         </div>
         <div className="flex  overflow-hidden items-center">
-          <img className="w-32" src="/logo-Wedo-mini.png" alt="Logo Ambev" />
+          <img className="w-32" src={data.logo_src} alt={data.logo_name} />
         </div>
-        <div className="flex  items-center">
+        <div className="flex items-center">
           <button className="material-icons bg-transparent text-white ounded-full h-10 w-10">
-            shopping_basket
+            {data.shopping_cart}
           </button>
         </div>
       </nav>

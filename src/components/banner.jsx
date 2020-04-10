@@ -2,10 +2,11 @@ function ImgBanner(props) {
   return props.img.map((aux) => {
     return (
       <img
+        key={aux.id}
         className="js-slide__img mx-2"
         src={aux.src}
         alt={aux.name}
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         draggable="false"
       />
     );

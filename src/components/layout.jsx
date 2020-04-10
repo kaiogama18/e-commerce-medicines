@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
 
       <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
     </Head>
-    <main className="flex flex-col h-screen w-screen">
+    <main className="flex flex-col h-screen w-screen overflow-hidden">
       <Navbar />
       {children}
     </main>
