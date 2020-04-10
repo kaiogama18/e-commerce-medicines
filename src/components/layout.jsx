@@ -1,6 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <>
@@ -22,6 +23,7 @@ const Layout = ({ children }) => (
     <main className="h-screen w-screen">
       <Navbar />
       {children}
+      <Footer />
     </main>
   </>
 );
