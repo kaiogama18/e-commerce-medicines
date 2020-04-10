@@ -3,10 +3,9 @@ function ImgBanner(props) {
     return (
       <img
         key={aux.id}
-        className="js-slide__img mx-2"
+        className="gallery-cell mx-2"
         src={aux.src}
         alt={aux.name}
-        crossOrigin="anonymous"
         draggable="false"
       />
     );
@@ -27,7 +26,7 @@ const Banner = () => {
     },
   ];
   return (
-    <section className="flex items-center justify-center overflow-hidden mb-5">
+    <section className="flex items-center justify-center overflow-hidden mb-5 main-gallery">
       <ImgBanner img={data} />
     </section>
   );
