@@ -4,11 +4,23 @@
   "description": "WEDO e-commerce prototype front end",
   "main": "index.js",
   "scripts": {
+    "precommit": "lint-staged",
+    "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "lint-css": "stylelint \"src/**/*.{css,less,styl,scss,sass,sss}\"",
+    "lint": "yarn run lint-js && yarn run lint-css",
+    "fix-js": "yarn run lint-js --fix",
+    "fix-css": "yarn run lint-css --fix",
+    "fix": "yarn run fix-js && yarn run fix-css",
+    "flow": "flow",
+    "flow:check": "flow check",
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test-watch": "yarn run test --watch --notify",
+    "test-cover": "yarn run test --coverage",
+    "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,6 +33,12 @@
     "url": "https://github.com/kaiogama18/e-commerce-medicines/issues"
   },
   "homepage": "https://github.com/kaiogama18/e-commerce-medicines#readme",
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
   "dependencies": {
     "next": "^9.3.4",
     "postcss-flexbugs-fixes": "^4.2.0",
@@ -29,5 +47,25 @@
     "react-dom": "^16.13.1",
     "sass": "^1.26.3",
     "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-flow": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "flow-bin": "^0.122.0",
+    "jest": "^25.3.0",
+    "stylelint": "^13.3.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0"
   }
 }

@@ -1,15 +1,15 @@
-import Layout from "../components/layout";
-import Search from "../components/search";
-import Category from "../components/category";
-import Banner from "../components/banner";
-import Delivery from "../components/delivery";
-import Card from "../components/card";
+import Layout from '../components/layout';
+import Search from '../components/search';
+import Category from '../components/category';
+import Banner from '../components/banner';
+import Delivery from '../components/delivery';
+import Card from '../components/card';
 
 class Index extends React.Component {
   render() {
     const data = {
-      tile: "Prorrogado!",
-      subtitle: " Melhores Ofertas da Semana",
+      tile: 'Prorrogado!',
+      subtitle: ' Melhores Ofertas da Semana',
     };
 
     return (
