@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "WEDO e-commerce prototype front end",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.16.2",
+    "npm": ">=6.4.1"
+  },
   "scripts": {
     "precommit": "lint-staged",
     "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
