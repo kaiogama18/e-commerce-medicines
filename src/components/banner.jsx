@@ -1,35 +1,39 @@
-
+import { Carousel } from 'react-responsive-carousel';
 function ImgBanner(props) {
-  return props.img.map((aux) => {
-    return (
-      <img
-        key={aux.id}
-        className="gallery-cell mx-2"
-        src={aux.src}
-        alt={aux.name}
-        draggable="false"
-      />
-    );
-  });
+  return (
+    <Carousel
+      showArrows={true}
+      dynamicHeight={true}
+      showThumbs={false}
+      autoPlay={true}
+      infiniteLoop={true}
+      showStatus={false}
+      emulateTouch={true}
+    >
+      {props.img.map((aux) => {
+        return <img src={aux.src} alt={aux.name} draggable="false" />;
+      })}
+    </Carousel>
+  );
 }
 
 const Banner = () => {
   const data = [
     {
-      id: "001",
-      name: "banner generico",
-      src: "/banner-generico.jpg",
+      id: '001',
+      name: 'banner generico',
+      src: '/products/banner1.jpg',
     },
     {
-      id: "002",
-      name: "banner generico",
-      src: "/banner-generico.jpg",
+      id: '002',
+      name: 'banner generico',
+      src: '/products/banner2.jpg',
     },
   ];
   return (
-    <section className="flex items-center justify-center overflow-hidden mb-5 main-gallery">
+    <div className="overflow-hidden">
       <ImgBanner img={data} />
-    </section>
+    </div>
   );
 };
 

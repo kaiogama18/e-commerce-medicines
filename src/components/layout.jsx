@@ -1,7 +1,8 @@
-import Head from "next/head";
-import PropTypes from "prop-types";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+import Navbar from './Navbar';
+import Footer from './footer';
+import { BreakpointProvider } from 'react-socks';
 
 const Layout = ({ children }) => (
   <>
@@ -22,11 +23,13 @@ const Layout = ({ children }) => (
       <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
     </Head>
     {/* <main className="flex flex-col h-screen w-screen "> */}
-    <body className="h-screen w-screen">
-      <Navbar />
-      {children}
-      <Footer />
-      <script src="/path/to/flickity.pkgd.min.js" />
+    <body className="h-screen w-screen ">
+      <BreakpointProvider>
+        <Navbar />
+        {children}
+        <Footer />
+        <script src="/path/to/flickity.pkgd.min.js" />
+      </BreakpointProvider>
     </body>
   </>
 );

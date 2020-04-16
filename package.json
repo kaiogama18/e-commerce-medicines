@@ -50,6 +50,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sass": "^1.26.3",
+    "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
@@ -70,6 +71,8 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "flow-bin": "^0.122.0",
     "jest": "^25.3.0",
+    "react-responsive-carousel": "^3.2.4",
+    "react-socks": "^2.1.0",
     "stylelint": "^13.3.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"

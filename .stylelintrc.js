@@ -37,6 +37,9 @@ module.exports = {
 
     // Opinionated rule, you can disable it if you want
     'string-quotes': 'single',
+    'declaration-colon-newline-after': 'always-multi-line',
+
+
 
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
     'order/order': [

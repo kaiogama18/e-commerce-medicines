@@ -1,0 +1,60 @@
+@import 'tablet_styles';
+
+@media screen and (max-width: 600px) {
+  /*
+   * Navbar
+   * ======================================================================== */
+  nav {
+    @apply flex justify-between overflow-hidden h-20 bg-default shadow-xl px-6;
+
+    button {
+      @apply bg-transparent text-white h-10 w-10;
+    }
+
+    img {
+      @apply w-32;
+    }
+  }
+
+  /*
+   * Search
+   * ======================================================================== */
+
+  .search {
+    @apply mx-auto shadow-lg m-5;
+
+    button {
+      @apply m-3;
+    }
+  }
+
+  /*
+   * Card
+   * ======================================================================== */
+
+  .card {
+    img {
+      @apply w-32;
+    }
+
+    .card-tilte {
+      @apply text-sm;
+    }
+
+    .card-price {
+      @apply text-xs;
+    }
+
+    button {
+      @apply text-sm;
+    }
+  }
+
+  /*
+   * Delivery
+   * ======================================================================== */
+
+  .delivery {
+    @apply text-xs;
+  }
+}

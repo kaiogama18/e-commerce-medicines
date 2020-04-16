@@ -10,6 +10,7 @@ module.exports = {
     'prettier',
     'prettier/flowtype',
     'prettier/react',
+    'stylelint-config-recommended'
   ],
 
   plugins: ['flowtype', 'css-modules', 'prettier', 'jest'],
@@ -27,6 +28,28 @@ module.exports = {
     // Forbid the use of extraneous packages
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': ['error', { packageDir: '.' }],
+
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: [
+          "extends",
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+        ],
+      },
+
+    ],
+    "block-no-empty": null,
+    "unit-whitelist": ["em", "rem", "s"],
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+
+    "css.validate": false, // Disable css built-in lint
+    "stylelint.enable": true, // Enable sytlelin
 
     // Recommend not to leave any console.log in your code
     // Use console.error, console.warn and console.info instead
