@@ -5,6 +5,7 @@ import Banner from '../components/banner';
 import Delivery from '../components/delivery';
 import Card from '../components/Card';
 import { Breakpoint } from 'react-socks';
+import CardCategory from '../components/cardCategory';
 
 class Index extends React.Component {
   render() {
@@ -17,6 +18,8 @@ class Index extends React.Component {
         <Banner />
         <Delivery />
         <Card />
+        <img src="/products/banner3.jpg" />
+        <CardCategory />
       </Layout>
     );
   }
