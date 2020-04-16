@@ -90,3 +90,13 @@ nav {
     @apply text-lg text-white uppercase py-5;
   }
 }
+
+/*
+   * Carousel
+   * ======================================================================== */
+
+.carousel {
+  img {
+    height: 30rem;
+  }
+}

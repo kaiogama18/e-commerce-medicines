@@ -18,7 +18,7 @@ class Index extends React.Component {
         <Banner />
         <Delivery />
         <Card />
-        <img src="/products/banner3.jpg" />
+        <img className="max-w-screen-xl mx-auto" src="/products/banner3.jpg" />
         <CardCategory />
       </Layout>
     );

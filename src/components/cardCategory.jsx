@@ -32,7 +32,7 @@ class CardCategory extends React.Component {
   render() {
     return (
       <div className="my-10">
-        <p className="text-sign">
+        <p className="text-sign max-w-screen-xl mx-auto text-justify">
           {tile}
           <a className="text-teal-500">{subtitle}</a>
         </p>
