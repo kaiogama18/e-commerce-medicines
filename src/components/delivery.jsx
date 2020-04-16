@@ -7,8 +7,10 @@ const Delivery = () => {
 
   return (
     <section className="delivery">
-      <p className="delivery-title">{data.tile}</p>
-      <p className="delivery-subtitle"> {data.subtitle} </p>
+      <p>
+        <a className="font-bold">{data.tile}</a>
+        <br /> {data.subtitle}
+      </p>
     </section>
   );
 };

@@ -27,7 +27,7 @@ nav {
   @apply flex bg-default mx-5 rounded-md;
 
   button {
-    @apply text-white font-bold self-center;
+    @apply text-white font-bold self-center mx-2;
   }
 
   input {
@@ -55,26 +55,19 @@ nav {
    * Card
    * ======================================================================== */
 
-.card-container {
-  @apply max-w-screen-xl mx-auto overflow-hidden text-center my-10;
-  p {
-    @apply text-2xl text-center;
-  }
+.text-sign {
+  @apply text-2xl text-center mb-5;
 }
 
 .card {
-  @apply flex flex-col overflow-hidden items-center text-center my-5;
+  @apply flex flex-col items-center max-w-sm  overflow-hidden text-center;
+
+  &:hover {
+    @apply rounded-md shadow-lg;
+  }
 
   img {
-    @apply w-64;
-  }
-
-  .card-tilte {
-    @apply text-xl font-bold mb-2;
-  }
-
-  .card-price {
-    @apply text-base font-bold;
+    @apply w-48;
   }
 
   button {
@@ -91,13 +84,9 @@ nav {
    * ======================================================================== */
 
 .delivery {
-  @apply max-w-screen-xl mx-auto flex flex-col p-3 overflow-hidden items-center text-center bg-default my-5 text-lg;
+  @apply text-center bg-default  my-5;
 
-  .delivery-title {
-    @apply mt-2 text-white font-bold uppercase;
-  }
-
-  .delivery-subtitle {
-    @apply mt-2 text-white uppercase;
+  p {
+    @apply text-lg text-white uppercase py-5;
   }
 }
