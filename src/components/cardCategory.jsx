@@ -1,4 +1,4 @@
-import data from '../data/card.json';
+import data from '../data/cardQ.json';
 
 const price = 'R$:';
 const btn = 'Saiba Mais';
