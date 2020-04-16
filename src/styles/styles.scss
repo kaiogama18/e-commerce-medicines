@@ -63,7 +63,7 @@ nav {
   @apply flex flex-col items-center max-w-sm  overflow-hidden text-center;
 
   &:hover {
-    @apply rounded-md shadow-lg;
+    @apply rounded-md shadow-lg border border-teal-500;
   }
 
   img {

@@ -32,21 +32,17 @@
    * Card
    * ======================================================================== */
 
+  .text-sign {
+    @apply text-base;
+  }
+
   .card {
     img {
       @apply w-32;
     }
 
-    .card-tilte {
-      @apply text-sm;
-    }
-
-    .card-price {
-      @apply text-xs;
-    }
-
     button {
-      @apply text-sm;
+      @apply py-1 px-2;
     }
   }
 

@@ -15,7 +15,7 @@ function CardProduct(props) {
             <p class="text-base mb-2">
               {aux.name} <br />
               <a class="text-gray-700 font-bold text-xl">
-                {price} {props.product[1].price}
+                {price} {aux.price}
               </a>
             </p>
             <div class="px-6 py-4">
