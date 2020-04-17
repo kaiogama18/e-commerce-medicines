@@ -13,7 +13,7 @@ class Navbar extends React.Component {
 
     return (
       <>
-        <Breakpoint large up className="bg-white">
+        <Breakpoint medium up>
           <nav>
             <div className="flex-center">
               <img src={data.logo_src} alt={data.logo_name} />
