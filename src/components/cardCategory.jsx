@@ -37,5 +37,4 @@ class CardCategory extends React.Component {
     );
   }
 }
-
 export default CardCategory;

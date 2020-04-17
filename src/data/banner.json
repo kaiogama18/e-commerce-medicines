@@ -1,12 +1,14 @@
 [
   {
-    "id": "001",
     "name": "banner generico",
     "src": "/products/banner1.jpg"
   },
   {
-    "id": "002",
     "name": "banner generico",
     "src": "/products/banner2.jpg"
+  },
+  {
+    "name": "banner generico",
+    "src": "https://www.who.int/images/default-source/searo---images/emergencies/covid19/banner-covid.tmb-1920v.jpg?sfvrsn=3af79ead_1"
   }
 ]
