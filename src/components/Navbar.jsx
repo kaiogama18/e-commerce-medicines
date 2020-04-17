@@ -16,23 +16,27 @@ class Navbar extends React.Component {
         <Breakpoint medium up>
           <nav>
             <div className="flex-center">
-              <img src={data.logo_src} alt={data.logo_name} />
+              <img className="mr-10" src={data.logo_src} alt={data.logo_name} />
               <Search />
-              <span class="material-icons text-4xl mr-3">
-                {data.login_user}
-              </span>
-              <p>
-                Faça o login <br /> ou registre-se
-              </p>
             </div>
-            <div className="btn-car">
-              <button className="material-icons mr-3">
-                {data.shopping_cart}
-              </button>
-              <p>
-                0 Itens <br />
-                R$ 0,00
-              </p>
+            <div className="flex">
+              <div className="flex items-center mr-5 loginn">
+                <span class="material-icons text-4xl mr-3">
+                  {data.login_user}
+                </span>
+                <p>
+                  Faça o login <br /> ou registre-se
+                </p>
+              </div>
+              <div className="btn-car">
+                <button className="material-icons mr-3">
+                  {data.shopping_cart}
+                </button>
+                <p>
+                  0 Itens <br />
+                  R$ 0,00
+                </p>
+              </div>
             </div>
           </nav>
         </Breakpoint>
