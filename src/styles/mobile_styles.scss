@@ -43,11 +43,16 @@
   .carousel-category {
     @apply flex;
 
+    .slideInner___2mfX9 {
+      @apply flex items-center justify-center;
+      // @apply flex items-center justify-center bg-yellow-500 border border-black;
+    }
+
     button {
-      @apply m-5 items-center p-2;
+      @apply items-center p-2;
 
       .btn-c {
-        @apply h-auto w-20 flex flex-col items-center;
+        @apply h-auto flex flex-col items-center;
 
         img {
           @apply w-20 h-20 rounded-full border-2 border-teal-400 shadow-teal-400;
@@ -60,31 +65,29 @@
     }
   }
 
-  //   /*
-  //    * Card
-  //    * ======================================================================== */
+  /*
+     * Card
+     * ======================================================================== */
 
-  //   .text-sign {
-  //     @apply text-base;
-  //   }
+  .text-sign {
+    @apply text-base;
+  }
 
-  //   .card {
-  //     img {
-  //       @apply w-32;
-  //     }
+  .card-product {
+    img {
+      @apply w-32;
+    }
 
-  //     button {
-  //       @apply py-1 px-2;
-  //     }
-  //   }
+    button {
+      @apply py-1 px-2;
+    }
+  }
 
-  //   /*
-  //    * Delivery
-  //    * ======================================================================== */
+  /*
+     * Delivery
+     * ======================================================================== */
 
-  //   .delivery {
-  //     p {
-  //       @apply text-xs;
-  //     }
-  //   }
+  .delivery {
+    @apply text-xs;
+  }
 }

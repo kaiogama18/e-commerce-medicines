@@ -54,3 +54,54 @@ nav {
     }
   }
 }
+
+/*
+   * Delivery
+   * ======================================================================== */
+
+.delivery {
+  @apply text-center bg-default text-lg  my-5;
+
+  p {
+    @apply text-white uppercase py-5;
+  }
+}
+
+/*
+   * Card
+   * ======================================================================== */
+
+// .text-sign {
+//   @apply text-2xl text-center mb-5;
+// }
+
+.card-product {
+  @apply flex flex-col items-center max-w-sm  text-center;
+
+  &:hover {
+    @apply rounded-md shadow-lg border border-teal-500;
+  }
+}
+
+.btn-default {
+  @apply bg-teal-500 text-base text-white py-1 px-6 rounded;
+
+  &:hover {
+    @apply bg-teal-700;
+  }
+}
+/*
+   * Carousel Banner
+   * ======================================================================== */
+
+// .carousel-slider {
+//   .card-product {
+//     @apply flex flex-row items-center max-h-full text-center;
+//   }
+// }
+
+// .carousel-banner {
+//   .slideInner___2mfX9 {
+//     @apply flex items-center justify-center bg-yellow-500 border border-black;
+//   }
+// }

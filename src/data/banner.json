@@ -1,0 +1,12 @@
+[
+  {
+    "id": "001",
+    "name": "banner generico",
+    "src": "/products/banner1.jpg"
+  },
+  {
+    "id": "002",
+    "name": "banner generico",
+    "src": "/products/banner2.jpg"
+  }
+]

@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
       <BreakpointProvider>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         {/* <script src="/path/to/flickity.pkgd.min.js" /> */}
       </BreakpointProvider>
     </main>

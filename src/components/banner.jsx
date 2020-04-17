@@ -1,4 +1,6 @@
+import data from '../data/banner.json';
 import { Carousel } from 'react-responsive-carousel';
+
 function ImgBanner(props) {
   return (
     <Carousel
@@ -17,24 +19,10 @@ function ImgBanner(props) {
   );
 }
 
-const Banner = () => {
-  const data = [
-    {
-      id: '001',
-      name: 'banner generico',
-      src: '/products/banner1.jpg',
-    },
-    {
-      id: '002',
-      name: 'banner generico',
-      src: '/products/banner2.jpg',
-    },
-  ];
-  return (
-    <div className="overflow-hidden">
-      <ImgBanner img={data} />
-    </div>
-  );
-};
+class Banner extends React.Component {
+  render() {
+    return <ImgBanner img={data} />;
+  }
+}
 
 export default Banner;
