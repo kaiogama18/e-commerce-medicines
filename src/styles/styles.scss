@@ -109,7 +109,7 @@ nav {
   }
 
   nav {
-    @apply flex justify-between overflow-hidden h-20 bg-default shadow-xl px-6;
+    @apply flex justify-between overflow-hidden h-20 bg-default shadow-xl;
 
     button {
       @apply bg-transparent text-white h-10 w-10;
@@ -118,10 +118,6 @@ nav {
     img {
       @apply w-32;
     }
-
-    .btn-car {
-      background-color: transparent !important;
-    }
   }
 
   /*
@@ -129,7 +125,7 @@ nav {
      * ======================================================================== */
 
   .search {
-    @apply flex bg-default mx-5 rounded-md mx-auto shadow-lg m-5;
+    @apply flex bg-default mx-5 rounded-md mx-auto m-5;
 
     button {
       @apply text-white font-bold self-center mx-2 m-3;
@@ -211,7 +207,7 @@ nav {
      * ======================================================================== */
 
   .search {
-    @apply flex bg-default mx-5 rounded-md mx-auto shadow-lg m-5;
+    @apply flex bg-default mx-5 rounded-md mx-auto  m-5;
 
     button {
       @apply text-white font-bold self-center mx-2 m-3;

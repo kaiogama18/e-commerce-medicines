@@ -6,8 +6,9 @@ function CarouselCategory(props) {
   return (
     <CarouselProvider
       naturalSlideWidth={100}
-      naturalSlideHeight={35}
-      totalSlides={2}
+      naturalSlideHeight={120}
+      totalSlides={6}
+      visibleSlides={4}
     >
       <Slider>
         <div className="carousel-category">
