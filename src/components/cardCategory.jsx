@@ -4,7 +4,6 @@ const price = 'R$:';
 const btn = 'Saiba Mais';
 const tile = 'Mais Vendidos na ';
 const subtitle = 'Quarentena';
-
 function CardProduct(props) {
   return (
     <>
@@ -12,6 +11,7 @@ function CardProduct(props) {
         return (
           <div class="card-product">
             <img src={aux.src} alt={aux.name} />
+
             <p class="text-base mb-2">
               {aux.name} <br />
               <a class="text-gray-700 font-bold text-xl">

@@ -35,7 +35,7 @@ class Index extends React.Component {
         </div>
 
         <p className="text-default">
-          <a className="text-teal-500">{cat}</a> {ter}
+          {cat} <a className="text-teal-500">{ter}</a>
         </p>
 
         <CardCategory />
