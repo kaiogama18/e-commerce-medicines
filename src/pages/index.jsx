@@ -30,7 +30,7 @@ class Index extends React.Component {
 
         <Card />
 
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-screen-xl mx-auto mt-10">
           <img src="/products/banner3.jpg" />
         </div>
 
