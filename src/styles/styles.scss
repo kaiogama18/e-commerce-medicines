@@ -17,21 +17,21 @@ nav {
   .btn-car {
     @apply bg-teal-500 text-white px-5 flex-center text-lg;
   }
-}
 
-/*
-   * Search
+  /*
+   * Search on Navbar
    * ======================================================================== */
 
-.search {
-  @apply flex bg-default mx-5 rounded-md;
+  .search {
+    @apply flex bg-default mx-5 rounded-md;
 
-  button {
-    @apply text-white font-bold self-center mx-2;
-  }
+    button {
+      @apply text-white font-bold self-center mx-2;
+    }
 
-  input {
-    @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
+    input {
+      @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
+    }
   }
 }
 
@@ -39,64 +39,18 @@ nav {
    * Categorys
    * ======================================================================== */
 
-.categorys {
-  @apply flex max-w-screen-xl mx-auto overflow-hidden h-16 text-white shadow-xl;
-}
+.category {
+  @apply overflow-hidden text-white shadow-xl bg-default;
 
-.btn-categorys {
-  @apply flex flex-col mx-2 items-center justify-center;
+  div {
+    @apply flex max-w-screen-xl mx-auto;
 
-  .btn-img {
-    @apply flex w-16 h-16 rounded-full border-2 border-teal-400 bg-white shadow-teal-400;
-  }
-}
+    button {
+      @apply mx-1 p-5;
 
-/*
-   * Card
-   * ======================================================================== */
-
-.text-sign {
-  @apply text-2xl text-center mb-5;
-}
-
-.card {
-  @apply flex flex-col items-center max-w-sm  overflow-hidden text-center;
-
-  &:hover {
-    @apply rounded-md shadow-lg border border-teal-500;
-  }
-
-  img {
-    @apply w-48;
-  }
-
-  button {
-    @apply bg-teal-500 text-base text-white py-1 px-6 rounded;
-
-    &:hover {
-      @apply bg-teal-700;
+      &:hover {
+        @apply rounded bg-blue-800;
+      }
     }
-  }
-}
-
-/*
-   * Delivery
-   * ======================================================================== */
-
-.delivery {
-  @apply text-center bg-default  my-5;
-
-  p {
-    @apply text-lg text-white uppercase py-5;
-  }
-}
-
-/*
-   * Carousel
-   * ======================================================================== */
-
-.carousel {
-  img {
-    height: 30rem;
   }
 }

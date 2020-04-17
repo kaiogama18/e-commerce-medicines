@@ -1,6 +1,6 @@
 import Layout from '../components/layout';
 import Search from '../components/search';
-import Category from '../components/category';
+import Category from '../components/Category';
 import Banner from '../components/banner';
 import Delivery from '../components/delivery';
 import Card from '../components/Card';
@@ -15,11 +15,14 @@ class Index extends React.Component {
           <Search />
         </Breakpoint>
         <Category />
+        {/*
         <Banner />
         <Delivery />
         <Card />
-        <img className="max-w-screen-xl mx-auto" src="/products/banner3.jpg" />
-        <CardCategory />
+        <div className="max-w-screen-xl mx-auto overflow-hidden">
+          <img src="/products/banner3.jpg" />
+        </div>
+        <CardCategory /> */}
       </Layout>
     );
   }

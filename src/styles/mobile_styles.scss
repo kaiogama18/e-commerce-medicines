@@ -14,45 +14,84 @@
     img {
       @apply w-32;
     }
+
+    .btn-car {
+      @apply bg-transparent;
+    }
   }
 
   /*
-   * Search
-   * ======================================================================== */
+     * Search
+     * ======================================================================== */
 
   .search {
-    @apply mx-auto shadow-lg m-5;
+    @apply flex bg-default mx-5 rounded-md mx-auto shadow-lg m-5;
 
     button {
-      @apply m-3;
+      @apply text-white font-bold self-center mx-2 m-3;
+    }
+
+    input {
+      @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
     }
   }
 
   /*
-   * Card
+   * Carousel Categorys
    * ======================================================================== */
 
-  .text-sign {
-    @apply text-base;
-  }
-
-  .card {
-    img {
-      @apply w-32;
-    }
+  .carousel-category {
+    @apply flex overflow-hidden;
 
     button {
-      @apply py-1 px-2;
+      @apply mx-2 items-center;
+
+      .btn-c {
+        @apply h-auto w-20 flex flex-col font-bold items-center;
+        img {
+          @apply w-16 h-16 rounded-full border-2 border-teal-400 shadow-teal-400;
+        }
+      }
+    }
+
+    div {
+      @apply flex max-w-screen-xl mx-auto;
+
+      button {
+        @apply mx-1 p-5;
+
+        &:hover {
+          @apply rounded bg-blue-800;
+        }
+      }
     }
   }
 
-  /*
-   * Delivery
-   * ======================================================================== */
+  //   /*
+  //    * Card
+  //    * ======================================================================== */
 
-  .delivery {
-    p {
-      @apply text-xs;
-    }
-  }
+  //   .text-sign {
+  //     @apply text-base;
+  //   }
+
+  //   .card {
+  //     img {
+  //       @apply w-32;
+  //     }
+
+  //     button {
+  //       @apply py-1 px-2;
+  //     }
+  //   }
+
+  //   /*
+  //    * Delivery
+  //    * ======================================================================== */
+
+  //   .delivery {
+  //     p {
+  //       @apply text-xs;
+  //     }
+  //   }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Medicamentos",
+    "src": "/suplementos.png"
+  },
+  {
+    "name": "Beleza",
+    "src": "/suplementos.png"
+  },
+  {
+    "name": "Saúde",
+    "src": "/suplementos.png"
+  },
+  {
+    "name": "Pediatria",
+    "src": "/suplementos.png"
+  },
+  {
+    "name": "Fralda",
+    "src": "/suplementos.png"
+  },
+  {
+    "name": "Genéricos",
+    "src": "/suplementos.png"
+  }
+]

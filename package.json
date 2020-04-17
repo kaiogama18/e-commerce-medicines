@@ -71,6 +71,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "flow-bin": "^0.122.0",
     "jest": "^25.3.0",
+    "pure-react-carousel": "^1.27.0",
     "react-responsive-carousel": "^3.2.4",
     "react-socks": "^2.1.0",
     "stylelint": "^13.3.2",
