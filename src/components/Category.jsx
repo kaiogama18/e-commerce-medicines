@@ -1,12 +1,6 @@
 import { Breakpoint } from 'react-socks';
 import data from '../data/category.json';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 
 function CarouselCategory(props) {
   return (

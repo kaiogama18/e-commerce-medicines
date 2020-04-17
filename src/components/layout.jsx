@@ -17,7 +17,6 @@ const Layout = ({ children }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
       <script type="text/javascript" src="jscript/graph.js"></script>
-      {/* <link rel="stylesheet" href="/path/to/flickity.css" media="screen" /> */}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 
       <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
@@ -27,7 +26,6 @@ const Layout = ({ children }) => (
         <Navbar />
         {children}
         <Footer />
-        {/* <script src="/path/to/flickity.pkgd.min.js" /> */}
       </BreakpointProvider>
     </main>
   </>
