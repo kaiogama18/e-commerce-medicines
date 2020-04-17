@@ -1,6 +1,10 @@
 @import 'tablet_styles';
 
 @media screen and (max-width: 600px) {
+  .text-default {
+    @apply max-w-screen-xl mx-auto text-center my-10 text-base;
+  }
+
   /*
    * Navbar
    * ======================================================================== */

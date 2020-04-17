@@ -7,10 +7,11 @@ import Card from '../components/Card';
 import { Breakpoint } from 'react-socks';
 import CardCategory from '../components/cardCategory';
 
-const price = 'R$:';
-const btn = 'Saiba Mais';
-const tile = 'Prorrogado!';
+const title = 'Prorrogado!';
 const subtitle = ' Melhores Ofertas da Semana de Páscoa';
+
+const cat = 'Mais Vendidos na ';
+const ter = 'Quarentena';
 
 class Index extends React.Component {
   render() {
@@ -22,14 +23,22 @@ class Index extends React.Component {
         <Category />
         <Banner />
         <Delivery />
+
+        <p className="text-default text-center">
+          <a className="text-teal-500">{title}</a> {subtitle}
+        </p>
+
         <Card />
 
         <div className="max-w-screen-xl mx-auto">
           <img src="/products/banner3.jpg" />
         </div>
-        {/*
 
-        <CardCategory /> */}
+        <p className="text-default">
+          <a className="text-teal-500">{cat}</a> {ter}
+        </p>
+
+        <CardCategory />
       </Layout>
     );
   }

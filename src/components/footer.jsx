@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col overflow-hidden items-center bg-default shadow-xl pt-6">
+    <footer className="flex flex-col overflow-hidden items-center bg-default shadow-xl pt-6 mt-10">
       <div className="flex flex-col rounded-md items-center text-center bg-white p-2">
         <p className="text-black font-bold">{title}</p>
         <div className="flex pt-2">
@@ -38,29 +38,29 @@ const Footer = () => {
 
 export default Footer;
 
-const title = "Nosso Aplicativo";
-const copyright = "WEDO MARKET @ 2020 - Todos direitos reservados";
+const title = 'Nosso Aplicativo';
+const copyright = 'WEDO MARKET @ 2020 - Todos direitos reservados';
 const mobile = [
   {
-    id: "01",
-    alt: "Google PLay",
-    src: "/googleP.png",
+    id: '01',
+    alt: 'Google PLay',
+    src: '/googleP.png',
   },
   {
-    id: "02",
-    alt: "Apple Store",
-    src: "/appleS.png",
+    id: '02',
+    alt: 'Apple Store',
+    src: '/appleS.png',
   },
 ];
 const img_social = [
   {
-    id: "01",
-    alt: "whatsapp",
-    src: "/what.png",
+    id: '01',
+    alt: 'whatsapp',
+    src: '/what.png',
   },
   {
-    id: "03",
-    alt: "whatsapp",
-    src: "/tw.png",
+    id: '03',
+    alt: 'whatsapp',
+    src: '/tw.png',
   },
 ];

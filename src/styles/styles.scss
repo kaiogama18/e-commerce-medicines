@@ -1,5 +1,9 @@
 @import 'const';
 
+.text-default {
+  @apply max-w-screen-xl mx-auto  my-10 text-lg uppercase;
+}
+
 /*
    * Navbar
    * ======================================================================== */
@@ -70,10 +74,6 @@ nav {
 /*
    * Card
    * ======================================================================== */
-
-// .text-sign {
-//   @apply text-2xl text-center mb-5;
-// }
 
 .card-product {
   @apply flex flex-col items-center max-w-sm  text-center;
