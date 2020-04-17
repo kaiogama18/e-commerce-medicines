@@ -1,20 +1,37 @@
 import { Breakpoint } from 'react-socks';
 import data from '../data/category.json';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from 'pure-react-carousel';
 
 function CarouselCategory(props) {
   return (
-    <div className="carousel-category">
-      {props.category.map((aux, index) => {
-        return (
-          <button>
-            <div className="btn-c">
-              <img src={aux.src} alt={aux.name} />
-              <p className="mt-2 text-xs uppercase">{aux.name}</p>
-            </div>
-          </button>
-        );
-      })}
-    </div>
+    <CarouselProvider
+      naturalSlideWidth={100}
+      naturalSlideHeight={40}
+      totalSlides={2}
+    >
+      <Slider>
+        <div className="carousel-category">
+          {props.category.map((aux, index) => {
+            return (
+              <Slide index={index}>
+                <button>
+                  <div className="btn-c">
+                    <img src={aux.src} alt={aux.name} />
+                    <p>{aux.name}</p>
+                  </div>
+                </button>
+              </Slide>
+            );
+          })}
+        </div>
+      </Slider>
+    </CarouselProvider>
   );
 }
 

@@ -41,27 +41,20 @@
    * ======================================================================== */
 
   .carousel-category {
-    @apply flex overflow-hidden;
+    @apply flex;
 
     button {
-      @apply mx-2 items-center;
+      @apply m-5 items-center p-2;
 
       .btn-c {
-        @apply h-auto w-20 flex flex-col font-bold items-center;
+        @apply h-auto w-20 flex flex-col items-center;
+
         img {
-          @apply w-16 h-16 rounded-full border-2 border-teal-400 shadow-teal-400;
+          @apply w-20 h-20 rounded-full border-2 border-teal-400 shadow-teal-400;
         }
-      }
-    }
 
-    div {
-      @apply flex max-w-screen-xl mx-auto;
-
-      button {
-        @apply mx-1 p-5;
-
-        &:hover {
-          @apply rounded bg-blue-800;
+        p {
+          @apply mt-3 text-xs font-bold uppercase;
         }
       }
     }
