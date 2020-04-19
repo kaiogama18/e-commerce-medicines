@@ -31,7 +31,7 @@ nav {
    * ======================================================================== */
 
   .search {
-    @apply flex mx-5 rounded-md;
+    @apply flex mx-5 rounded-md justify-center items-center;
 
     button {
       @apply text-white bg-teal-500 font-bold self-center rounded-r-md;
@@ -162,14 +162,14 @@ nav {
      * ======================================================================== */
 
   .search {
-    @apply flex bg-default mx-5 rounded-md mx-auto m-5;
+    @apply flex mx-5 rounded-md mx-auto m-5 shadow-md;
 
     button {
-      @apply text-white font-bold self-center mx-2 m-3;
+      @apply text-white bg-teal-500 font-bold rounded-r-md px-5;
     }
 
     input {
-      @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
+      @apply h-full w-full border border-teal-500 bg-gray-200 rounded-l-md p-3;
     }
   }
 
@@ -244,14 +244,14 @@ nav {
      * ======================================================================== */
 
   .search {
-    @apply flex bg-default mx-5 rounded-md mx-auto  m-5;
+    @apply mx-5 shadow-md;
 
     button {
-      @apply text-white font-bold self-center mx-2 m-3;
+      @apply text-white bg-teal-500 font-bold rounded-r-md px-5;
     }
 
     input {
-      @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
+      @apply w-full border bg-gray-200 rounded-l-md p-3;
     }
   }
 
