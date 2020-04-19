@@ -1,7 +1,7 @@
 function Search() {
   return (
     <form className="search">
-      <input type="text" required />
+      <input type="text" placeholder="o que você procura?" required />
       <button className="material-icons">search</button>
     </form>
   );
