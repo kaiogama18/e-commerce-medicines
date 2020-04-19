@@ -31,14 +31,18 @@ nav {
    * ======================================================================== */
 
   .search {
-    @apply flex bg-default mx-5 rounded-md;
+    @apply flex mx-5 rounded-md;
 
     button {
-      @apply text-white font-bold self-center mx-2;
+      @apply text-white bg-teal-500 font-bold self-center rounded-r-md;
+
+      &:hover {
+        @apply bg-teal-600;
+      }
     }
 
     input {
-      @apply w-full border border-default bg-gray-200 rounded-l-md p-3;
+      @apply h-full w-full bg-gray-200 rounded-l-md p-3;
     }
   }
 }
@@ -68,7 +72,7 @@ nav {
    * ======================================================================== */
 
 .delivery {
-  @apply text-center bg-default text-lg  my-5;
+  @apply text-center bg-default text-lg;
 
   p {
     @apply text-white uppercase py-5;
