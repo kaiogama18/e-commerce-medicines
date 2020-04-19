@@ -1,25 +1,28 @@
 import data from '../data/card.json';
 
 const price = 'R$:';
-const btn = 'Saiba Mais';
+const btn = 'COMPRAR';
 
 function CardProduct(props) {
   return (
     <>
       {props.product.map((aux, index) => {
         return (
-          <div class="card-product">
-            <img src={aux.src} alt={aux.name} />
-
-            <p class="text-base mb-2">
-              {aux.name} <br />
-              <a class="text-gray-700 font-bold text-xl">
-                {price} {aux.price}
-              </a>
-            </p>
-            <div class="px-6 py-4">
-              <button className="btn-default">{btn}</button>
-            </div>
+          <div className="card-product" key={index}>
+            <button>
+              <div className="card-img">
+                <img src={aux.src} alt={aux.name} />
+              </div>
+              <div className="card-text">
+                <p>
+                  {aux.name} <br />
+                </p>
+                <a>
+                  {price} {aux.price}
+                </a>
+              </div>
+            </button>
+            <button className="card-btn">{btn}</button>
           </div>
         );
       })}

@@ -24,8 +24,8 @@ class Index extends React.Component {
         <Banner />
         <Delivery />
 
-        <p className="text-default text-center">
-          <a className="text-teal-500">{title}</a> {subtitle}
+        <p className="text-default">
+          <a className="text-teal-600">{title}</a> {subtitle}
         </p>
 
         <Card />
@@ -35,7 +35,7 @@ class Index extends React.Component {
         </div>
 
         <p className="text-default">
-          {cat} <a className="text-teal-500">{ter}</a>
+          {cat} <a className="text-teal-600">{ter}</a>
         </p>
 
         <CardCategory />

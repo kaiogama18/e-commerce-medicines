@@ -11,6 +11,7 @@ function ImgBanner(props) {
       infiniteLoop={true}
       showStatus={false}
       emulateTouch={true}
+      showIndicators={false}
     >
       {props.img.map((aux) => {
         return <img src={aux.src} alt={aux.name} draggable="false" />;

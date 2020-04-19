@@ -1,7 +1,7 @@
 @import 'const';
 
 .text-default {
-  @apply max-w-screen-xl mx-auto  my-10 text-lg uppercase;
+  @apply max-w-screen-xl mx-auto my-10 text-3xl uppercase border-b border-gray-600;
 }
 
 /*
@@ -20,6 +20,10 @@ nav {
 
   .btn-car {
     @apply bg-teal-500 text-white px-5 flex-center text-lg;
+
+    &:hover {
+      @apply bg-teal-600;
+    }
   }
 
   /*
@@ -53,7 +57,7 @@ nav {
       @apply mx-1 p-5;
 
       &:hover {
-        @apply rounded bg-blue-800;
+        @apply bg-blue-800;
       }
     }
   }
@@ -76,10 +80,35 @@ nav {
    * ======================================================================== */
 
 .card-product {
-  @apply flex flex-col items-center max-w-sm  text-center;
+  @apply rounded-md border border-4 border-white;
 
   &:hover {
-    @apply rounded-md shadow-lg border border-teal-500;
+    @apply rounded-md shadow-lg border-4 border-teal-500;
+  }
+
+  .card-img {
+    @apply flex justify-center;
+  }
+
+  .card-text {
+    @apply my-5 flex flex-col items-center;
+
+    p {
+      @apply text-xl mb-2 text-center overflow-hidden h-16;
+
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    a {
+      @apply text-gray-700 font-bold text-3xl h-12;
+    }
+  }
+
+  .card-btn {
+    @apply h-12 bg-teal-500 w-full text-center text-xl rounded-sm text-white;
   }
 }
 
@@ -104,6 +133,10 @@ nav {
    */
 
 @media screen and (max-width: 992px) {
+  .text-default {
+    @apply border-transparent text-2xl text-center;
+  }
+
   .loginn {
     display: none !important;
   }
