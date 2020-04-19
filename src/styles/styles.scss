@@ -166,6 +166,10 @@ nav {
 
     button {
       @apply text-white bg-teal-500 font-bold rounded-r-md px-5;
+
+      &:hover {
+        @apply bg-teal-600;
+      }
     }
 
     input {
@@ -248,6 +252,10 @@ nav {
 
     button {
       @apply text-white bg-teal-500 font-bold rounded-r-md px-5;
+
+      &:hover {
+        @apply bg-teal-600;
+      }
     }
 
     input {
