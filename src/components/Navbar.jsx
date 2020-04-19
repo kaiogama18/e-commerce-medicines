@@ -29,7 +29,7 @@ class Navbar extends React.Component {
                 </p>
               </div>
               <div className="btn-car">
-                <button className="material-icons mr-3">
+                <button className="material-icons text-4xl mr-3">
                   {data.shopping_cart}
                 </button>
                 <p>
@@ -49,7 +49,7 @@ class Navbar extends React.Component {
               <img src={data.logo_src} alt={data.logo_name} />
             </div>
             <div className="flex-center">
-              <button className="material-icons">{data.shopping_cart}</button>
+              <button className="material-icons ">{data.shopping_cart}</button>
             </div>
           </nav>
         </Breakpoint>
