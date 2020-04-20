@@ -15,19 +15,19 @@ function Card(props) {
       {props.product.map((aux, index) => {
         return (
           <div className="card-product" key={index}>
-            <button onClick={() => Click(aux.id)}>
-              <div className="card-img">
-                <img src={aux.src} alt={aux.name} />
-              </div>
-              <div className="card-text">
-                <p>
-                  {aux.name} <br />
-                </p>
-                <a>
-                  {price} {aux.price}
-                </a>
-              </div>
-            </button>
+            {/* <button onClick={() => Click(aux.id)}> */}
+            <div className="card-img">
+              <img src={aux.src} alt={aux.name} />
+            </div>
+            <div className="card-text">
+              <p>
+                {aux.name} <br />
+              </p>
+              <a>
+                {price} {aux.price}
+              </a>
+            </div>
+            {/* </button> */}
             <button className="card-btn">{btn}</button>
           </div>
         );
