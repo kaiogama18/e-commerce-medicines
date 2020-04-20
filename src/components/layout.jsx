@@ -2,7 +2,8 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
 import Footer from './footer';
-import { BreakpointProvider } from 'react-socks';
+import { BreakpointProvider, Breakpoint } from 'react-socks';
+import Search from './search';
 
 const Layout = ({ children }) => (
   <>
@@ -18,12 +19,14 @@ const Layout = ({ children }) => (
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
       <script type="text/javascript" src="jscript/graph.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-
       <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
     </Head>
     <main>
       <BreakpointProvider>
         <Navbar />
+        <Breakpoint small down>
+          <Search />
+        </Breakpoint>
         {children}
         <Footer />
       </BreakpointProvider>

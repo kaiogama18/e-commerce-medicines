@@ -14,7 +14,7 @@ function CarouselCategory(props) {
         <div className="carousel-category">
           {props.category.map((aux, index) => {
             return (
-              <Slide index={index}>
+              <Slide key={index}>
                 <button>
                   <div className="btn-c">
                     <img src={aux.src} alt={aux.name} />
@@ -34,8 +34,8 @@ function Categorys(props) {
   return (
     <div className="category">
       <div>
-        {props.category.map((aux) => {
-          return <button key={aux.id}>{aux.name}</button>;
+        {props.category.map((aux, index) => {
+          return <button key={index}>{aux.name}</button>;
         })}
       </div>
     </div>

@@ -13,8 +13,10 @@ function ImgBanner(props) {
       emulateTouch={true}
       showIndicators={false}
     >
-      {props.img.map((aux) => {
-        return <img src={aux.src} alt={aux.name} draggable="false" />;
+      {props.img.map((aux, index) => {
+        return (
+          <img src={aux.src} alt={aux.name} key={index} draggable="false" />
+        );
       })}
     </Carousel>
   );

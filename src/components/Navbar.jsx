@@ -21,7 +21,7 @@ class Navbar extends React.Component {
             </div>
             <div className="flex">
               <div className="flex items-center mr-5 loginn">
-                <span class="material-icons text-4xl mr-3">
+                <span className="material-icons text-4xl mr-3">
                   {data.login_user}
                 </span>
                 <p>
