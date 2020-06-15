@@ -1,5 +1,5 @@
 import { Breakpoint } from 'react-socks';
-import data from '../data/category.json';
+import data from '../../data/category.json';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 
 function CarouselCategory(props) {

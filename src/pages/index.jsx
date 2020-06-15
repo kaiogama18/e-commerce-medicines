@@ -1,9 +1,5 @@
-import Layout from '../components/layout';
-import Category from '../components/Category';
-import Banner from '../components/Banner';
-import Products from '../components/Products';
-
 import produto from '../data/card.json';
+import { Categorys, Banner, Products, Layout } from '../components';
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -23,7 +19,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Category />
+        <Categorys />
         <Banner />
         <Delivery />
         <Products data={produto} />

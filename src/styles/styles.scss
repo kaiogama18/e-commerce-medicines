@@ -34,7 +34,7 @@ nav {
     @apply flex mx-5 rounded-md justify-center items-center;
 
     button {
-      @apply flex justify-center text-white bg-teal-500 font-bold rounded-r-md;
+      @apply justify-center text-white bg-teal-500 font-bold rounded-r-md;
 
       &:hover {
         @apply bg-teal-600;

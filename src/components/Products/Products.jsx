@@ -1,35 +1,33 @@
-import data from '../data/card.json';
-import data1 from '../data/cardQ.json';
-import { Redirect, Link } from 'react-router-dom';
+import data from '../../data/card.json';
+import data1 from '../../data/cardQ.json';
+import Link from 'next/link';
 
 const price = 'R$:';
 const btn = 'COMPRAR';
 
-function Click(props) {
-  console.log(props);
-}
+
 
 function Card(props) {
   return (
     <>
       {props.product.map((aux, index) => {
         return (
-          <div className="card-product" key={index}>
-            {/* <button onClick={() => Click(aux.id)}> */}
-            <div className="card-img">
-              <img src={aux.src} alt={aux.name} />
+          <Link href="/details">
+            <div className="card-product" key={index}>
+              <div className="card-img">
+                <img src={aux.src} alt={aux.name} />
+              </div>
+              <div className="card-text">
+                <p>
+                  {aux.name} <br />
+                </p>
+                <a>
+                  {price} {aux.price}
+                </a>
+              </div>
+              <button className="card-btn">{btn}</button>
             </div>
-            <div className="card-text">
-              <p>
-                {aux.name} <br />
-              </p>
-              <a>
-                {price} {aux.price}
-              </a>
-            </div>
-            {/* </button> */}
-            <button className="card-btn">{btn}</button>
-          </div>
+          </Link>
         );
       })}
     </>

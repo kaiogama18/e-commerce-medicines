@@ -1,5 +1,6 @@
 import { Breakpoint } from 'react-socks';
-import Search from './search';
+import Link from 'next/link';
+import { Search } from '..';
 
 class Navbar extends React.Component {
   render() {
@@ -16,7 +17,9 @@ class Navbar extends React.Component {
         <Breakpoint medium up>
           <nav>
             <div className="flex-center">
-              <img className="mr-10" src={data.logo_src} alt={data.logo_name} />
+              <Link href="/">
+                <img className="mr-10" src={data.logo_src} alt={data.logo_name} />
+              </Link>
               <Search />
             </div>
             <div className="flex">
@@ -46,7 +49,9 @@ class Navbar extends React.Component {
               <button className="material-icons">{data.menu_hamburguer}</button>
             </div>
             <div className="flex overflow-hidden items-center">
-              <img src={data.logo_src} alt={data.logo_name} />
+              <Link href="/">
+                <img src={data.logo_src} alt={data.logo_name} />
+              </Link>
             </div>
             <div className="flex-center">
               <button className="material-icons ">{data.shopping_cart}</button>

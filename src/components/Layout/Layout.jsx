@@ -1,9 +1,6 @@
 import Head from 'next/head';
-import PropTypes from 'prop-types';
-import Navbar from './Navbar';
-import Footer from './footer';
 import { BreakpointProvider, Breakpoint } from 'react-socks';
-import Search from './search';
+import { Search, Navbar, Footer } from '..';
 
 const Layout = ({ children }) => (
   <>
@@ -34,8 +31,8 @@ const Layout = ({ children }) => (
   </>
 );
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 
 export default Layout;

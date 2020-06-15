@@ -1,4 +1,4 @@
-import data from '../data/banner.json';
+import data from '../../data/banner.json';
 import { Carousel } from 'react-responsive-carousel';
 
 function ImgBanner(props) {
