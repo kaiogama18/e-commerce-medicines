@@ -1,7 +1,7 @@
 import produto from '../data/card.json';
 import { Categorys, Banner, Products, Layout } from '../components';
 import { useState, useEffect } from 'react';
-import rota from '../Routes/rota';
+import Rota from '../Routes/Rota';
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -23,7 +23,7 @@ const Index = () => {
   const [categorys, setCategorys] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
-      const { data } = await rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
+      const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
       setCategorys(data.listaDeCategorias)
     }
     fetchAPI();
