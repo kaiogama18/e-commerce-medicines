@@ -31,22 +31,25 @@ function CarouselCategory(props) {
 }
 
 function Categorys(props) {
+  console.log(props)
   return (
     <div className="category">
       <div>
-        {props.category.map((aux, index) => {
-          return <button key={index}>{aux.name}</button>;
-        })}
+        {props.category.map(aux => {
+          return <button key={aux}>{aux.nome}</button>;
+        })
+        }
       </div>
     </div>
   );
 }
 
-const Category = () => {
+const Category = ({ categorys }) => {
+
   return (
     <>
       <Breakpoint medium up>
-        <Categorys category={data} />
+        <Categorys category={categorys} />
       </Breakpoint>
 
       <Breakpoint small down>
