@@ -44,6 +44,18 @@ function Categorys(props) {
   );
 }
 
+// function Categorys(props) {
+//     return (
+//       <div className="category">
+//         <div>
+//           {props.category.map((aux, index) => {
+//             return <button key={index}>{aux.name}</button>;
+//           })}
+//         </div>
+//       </div>
+//     );
+//   }
+
 const Category = ({ categorys }) => {
 
   return (
