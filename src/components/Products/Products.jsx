@@ -15,7 +15,6 @@ function Card(props) {
           <Link href="/details">
             <div className="card-product" key={product.id}>
               <div className="card-img">
-                {/* <img src={product.foto} alt={product.nome} /> */}
                 <img src="img/no-photo.svg" alt={product.nome} />
               </div>
               <div className="card-text">
@@ -26,7 +25,6 @@ function Card(props) {
                   {por}{product.preco} por:
                 </Typography>
                 <a>
-                  
                   {price} {product.preco}
                 </a>
               </div>

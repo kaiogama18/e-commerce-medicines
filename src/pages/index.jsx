@@ -40,6 +40,9 @@ const Index = () => {
       <Banner bannes={bannes} />
       <Delivery />
       <Products promotion={promotion} />
+      <div className="max-w-screen-xl mx-auto mt-10">
+        <img src="/products/banner3.jpg" />
+      </div>
     </Layout>
   );
 }
