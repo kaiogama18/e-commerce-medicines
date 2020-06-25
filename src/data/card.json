@@ -1,50 +1,60 @@
 [
   {
     "id": "0001",
-    "name": "Centrum Omega 30 Comprimidos",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/38/1038046_centrum-omega-30-comprimidos_s1_637118019573766064",
-    "price": "36,40"
+    "nome": "Centrum Omega 30 Comprimidos",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/38/1038046_centrum-omega-30-comprimidos_s1_637118019573766064",
+    "preco": "36,40"
   },
   {
     "id": "0002",
-    "name": "Ovo de Páscoa Barbie Lacta 166g",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/51/1051554_ovo-de-pascoa-barbie-lacta-166g_s5_637221366715849791.jpg",
-    "price": "49,90"
+    "nome": "Ovo de Páscoa Barbie Lacta 166g",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/51/1051554_ovo-de-pascoa-barbie-lacta-166g_s5_637221366715849791.jpg",
+    "preco": "49,90"
   },
   {
     "id": "0003",
-    "name": "Maleato de Dexclorfeniramina 0,4mg Solução Oral",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/57/1057840_maleato-de-dexclorfeniramina-0-4mg-solucao-oral_s1_637220307209905943.jpg",
-    "price": "8,30"
+    "nome": "Maleato de Dexclorfeniramina 0,4mg Solução Oral",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/57/1057840_maleato-de-dexclorfeniramina-0-4mg-solucao-oral_s1_637220307209905943.jpg",
+    "preco": "8,30"
   },
   {
     "id": "0004",
-    "name": "Vitamina D3 Black Skull 100 Caps",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/49/1049386_vitamina-d3-black-skull-100-caps_s1_637150399690153901",
-    "price": "136,00"
+    "nome": "Vitamina D3 Black Skull 100 Caps",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/49/1049386_vitamina-d3-black-skull-100-caps_s1_637150399690153901",
+    "preco": "136,00"
   },
   {
     "id": "0005",
-    "name": "Imobilizador Pulso Sport Tala Esquerda Mormaii Taman...",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/54/1054862_imobilizador-pulso-sport-tala-esquerda-mormaii-tamanho-m_s1_637210921879449024.jpg",
-    "price": "28,50"
+    "nome": "Imobilizador Pulso Sport Tala Esquerda Mormaii Taman...",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/54/1054862_imobilizador-pulso-sport-tala-esquerda-mormaii-tamanho-m_s1_637210921879449024.jpg",
+    "preco": "28,50"
   },
   {
     "id": "0006",
-    "name": "Antisseptico Bucal Colgate PerioGard sem Álcool 250ml",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/39/1039105_antisseptico-bucal-colgate-periogard-sem-alcool-250ml_s1_637118031488705046",
-    "price": "29,66"
+    "nome": "Antisseptico Bucal Colgate PerioGard sem Álcool 250ml",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/39/1039105_antisseptico-bucal-colgate-periogard-sem-alcool-250ml_s1_637118031488705046",
+    "preco": "29,66"
   },
   {
     "id": "0007",
-    "name": "Forteviron 250mg 60 Comprimidos",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/37/1037060_forteviron-250mg-60-comprimidos_s1_637118011881448681",
-    "price": "72,00"
+    "nome": "Forteviron 250mg 60 Comprimidos",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/37/1037060_forteviron-250mg-60-comprimidos_s1_637118011881448681",
+    "preco": "72,00"
   },
   {
     "id": "0008",
-    "name": "Cereal Infantil Nestlé Mucilon Bl Arroz/Aveia Sachet...",
-    "src": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/35/1035310_cereal-infantil-nestle-mucilon-bl-arroz-aveia-sachet-230g_s1_637117996158464038",
-    "price": "149,90"
+    "nome": "Cereal Infantil Nestlé Mucilon Bl Arroz/Aveia Sachet...",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/35/1035310_cereal-infantil-nestle-mucilon-bl-arroz-aveia-sachet-230g_s1_637117996158464038",
+    "preco": "149,90"
+  },
+  {
+    "nome": "Máscara De Proteção Respiratória",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/57/1057194_mascara-em-tecido-lavavel-pacote-com-5-cinza_m2_637219533633475572.jpg",
+    "preco": "6,00"
+  },
+  {
+    "nome": "Álcool Em Gel 70% Pharmakos 300ml",
+    "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/56/1056842_alcool-em-gel-70-pharmakos-300ml_m2_637215219042600256.jpg",
+    "preco": "16,90"
   }
 ]

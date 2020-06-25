@@ -13,19 +13,11 @@ function ImgBanner(props) {
       emulateTouch={true}
       showIndicators={false}
     >
-      {props.img.map((aux, index) => {
-        return (
-          <img src={aux.src} alt={aux.name} key={index} draggable="false" />
-        );
-      })}
+      {props.bannes.map(banner => { return <img src={banner.url_banner} draggable="false" /> })}
     </Carousel>
   );
 }
 
-class Banner extends React.Component {
-  render() {
-    return <ImgBanner img={data} />;
-  }
-}
+const Banner = ({ bannes }) => { return <ImgBanner bannes={data} />; }
 
 export default Banner;
