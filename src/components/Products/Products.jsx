@@ -1,64 +1,47 @@
-import data from '../../data/card.json';
-import Link from 'next/link';
-import Typography from '@material-ui/core/Typography';
-import { Button } from '@material-ui/core';
+import OwlCarousel from "react-owl-carousel2";
+import { Container } from "@material-ui/core";
+import { Adverts, Product } from "..";
 
-const price = 'R$ ';
-const por = 'De R$ ';
-const btn = 'COMPRAR';
+const Title = 'MELHORES OFERTAS DO MÊS DE JUNHO';
+const Alert = 'PRORROGADO!';
 
-function Card(props) {
-  return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-      {props.products.map((product) => {
-        return (
-          <Link href="/details">
-            <div className="card-product" key={product.id}>
-              <div className="card-img">
-                <img src="img/no-photo.svg" alt={product.nome} />
-              </div>
-              <div className="card-text">
-                <p>
-                  {product.nome} <br />
-                </p>
-                <Typography variant="subtitle1">
-                  {por}{product.preco} por:
-                </Typography>
-                <a>
-                  {price} {product.preco}
-                </a>
-              </div>
-              <Button variant="contained" size="large"
-                fullWidth={true}
-                disableElevation={true}
-                color="primary">
-                {btn}
-              </Button>
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  );
-}
+const options = {
+  center: false,
+  loop: false,
+  margin: 10,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 4
+    },
+    1000: {
+      items: 5
+    }
+  }
+};
 
-const Products = ({ promotion }) => {
+export default ({ promotions }) => {
   return (
     <>
       <p className="text-default">
-        <a className="text-teal-600">PRORROGADO!</a> MELHORES OFERTAS DO
-          MÊS DE JUNHO
-        </p>
-      <Card products={promotion} />
-      <div className="max-w-screen-xl mx-auto mt-10">
-        <img src="/products/banner3.jpg" />
-      </div>
-      <p className="text-default">
-        MAIS VENDIDOS NA <a className="text-teal-600">QUARENTENA</a>
+        <a className="text-teal-600">{Alert}</a> {Title}
       </p>
-      <Card products={data} />
+      <Container>
+        <OwlCarousel options={options}>
+          {
+            promotions.map(promotions => (
+              <Product
+                nome={promotions.nome}
+                precoMaior={promotions.precoMaior}
+                preco={promotions.preco} />
+            ))
+          }
+        </OwlCarousel>
+      </Container>
+      <Adverts />
     </>
-  );
+  )
 }
 
-export default Products;

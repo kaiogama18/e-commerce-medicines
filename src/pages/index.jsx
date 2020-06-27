@@ -1,7 +1,7 @@
-import produto from '../data/card.json';
-import { Categorys, Banner, Products, Layout } from '../components';
+import { Categorys, Banner, Products, Layout, Adverts } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
+import Promotions from '../components/Promotions/Promotions';
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -23,26 +23,26 @@ const Index = () => {
   const route = '/produto/oferta';
   const [categorys, setCategorys] = useState([]);
   const [bannes, setBannes] = useState([]);
-  const [promotion, setPromotion] = useState([]);
+  const [promotions, setPromotions] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
       const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
       setCategorys(data.listaDeCategorias)
       setBannes(data.listaDeBanners)
-      setPromotion(data.listaDeProdutos)
+      setPromotions(data.listaDeProdutos)
     }
     fetchAPI();
   }, route)
 
   return (
     <Layout>
-      <Categorys categorys={categorys}  />
+      <Categorys categorys={categorys} />
       <Banner bannes={bannes} />
       <Delivery />
-      <Products promotion={promotion} />
-      <div className="max-w-screen-xl mx-auto mt-10">
-        <img src="/products/banner3.jpg" />
-      </div>
+      <Promotions promotions={promotions} />
+
+      {/* <Products promotions={promotions} /> */}
+      {/* <Adverts /> */}
     </Layout>
   );
 }

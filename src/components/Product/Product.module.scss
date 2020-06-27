@@ -1,0 +1,25 @@
+
+.cardContent{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .cardTitle {
+    height: 4rem;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .oldPrice {
+    text-decoration: line-through;
+  }
+  .price {
+    font-weight: bold;
+    color: #4a5568;
+  }
+
+}
+
+.button {
+  background-color: #38b2ac !important ;
+  color: white !important;
+}
