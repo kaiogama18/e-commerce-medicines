@@ -17,7 +17,6 @@ function Search() {
   }, route)
 
   return (
-
     <>
       <div className={styles.search}>
         <div className="mr-2">

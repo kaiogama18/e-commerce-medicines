@@ -1,6 +1,6 @@
 export { default as Banner } from './Banner/Banner';
 export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
-export { default as Categorys } from './Categorys/Category';
+export { default as Categories } from './Categories/Categories';
 export { default as Footer } from './Footer/Footer';
 export { default as Layout } from './Layout/Layout';
 export { default as Navbar } from './Navbar/Navbar';

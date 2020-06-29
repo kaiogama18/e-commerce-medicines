@@ -1,8 +1,9 @@
 import { Breakpoint } from 'react-socks';
-import OwlCarousel from 'react-owl-carousel2';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import data from '../../data/category.json';
-import { Box, Container, Button, AppBar, Tabs, Tab } from '@material-ui/core';
+import { Container, AppBar, Tabs, Tab } from '@material-ui/core';
+import styles from "./Categories.module.scss"
+
 function CarouselCategory(props) {
   return (
     <CarouselProvider
@@ -32,7 +33,7 @@ function CarouselCategory(props) {
 }
 
 
-const Category = ({ categorys }) => {
+const Categories = ({ categories }) => {
 
   const options = {
     center: true,
@@ -47,9 +48,9 @@ const Category = ({ categorys }) => {
   };
 
   return (
-    <>
+    <div >
       <Breakpoint medium up>
-        <AppBar position="static" color="default">
+        <AppBar position="static" color="default" className={styles.categories}>
           <Container>
             <Tabs
               // value={value}
@@ -60,8 +61,8 @@ const Category = ({ categorys }) => {
               scrollButtons="auto"
               aria-label="scrollable auto tabs example"
             >
-              {categorys.map(category => (
-                <Tab label={category.nome} />
+              {categories.map(category => (
+                <Tab label={category.nome} className={styles.text} />
               ))}
             </Tabs>
           </Container>
@@ -71,7 +72,7 @@ const Category = ({ categorys }) => {
       <Breakpoint small down>
         <CarouselCategory category={data} />
       </Breakpoint>
-    </>
+    </div>
   );
 };
-export default Category;
+export default Categories;

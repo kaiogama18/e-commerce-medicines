@@ -1,4 +1,4 @@
-import { Categorys, Banner, Products, Layout, Adverts } from '../components';
+import { Categories, Banner, Products, Layout, Adverts } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 import Promotions from '../components/Promotions/Promotions';
@@ -21,13 +21,13 @@ function Delivery() {
 const Index = () => {
 
   const route = '/produto/oferta';
-  const [categorys, setCategorys] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [bannes, setBannes] = useState([]);
   const [promotions, setPromotions] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
       const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
-      setCategorys(data.listaDeCategorias)
+      setCategories(data.listaDeCategorias)
       setBannes(data.listaDeBanners)
       setPromotions(data.listaDeProdutos)
     }
@@ -36,7 +36,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <Categorys categorys={categorys} />
+      <Categories categories={categories} />
       <Banner bannes={bannes} />
       <Delivery />
       <Promotions promotions={promotions} />
