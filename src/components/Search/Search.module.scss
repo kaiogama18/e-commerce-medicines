@@ -1,0 +1,13 @@
+
+.search{
+    display: flex;
+    padding: 0.4rem;
+    align-items: center;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #edf2f7;
+    .searchIcon{
+        color: #38b2ac;
+    }
+}

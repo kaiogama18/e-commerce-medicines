@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Search } from '..';
 
 class Navbar extends React.Component {
+
+  
   render() {
     const data = {
       logo_src: '/logo-Wedo-mini.png',
@@ -11,6 +13,9 @@ class Navbar extends React.Component {
       shopping_cart: 'shopping_basket',
       login_user: 'account_circle',
     };
+
+    
+
 
     return (
       <>
