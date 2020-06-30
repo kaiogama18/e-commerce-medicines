@@ -1,20 +1,20 @@
 import OwlCarousel from "react-owl-carousel2";
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { Adverts, Product } from "..";
-
-const Title = 'MELHORES OFERTAS DO MÊS DE JUNHO';
-const Alert = 'PRORROGADO!';
+import data from '../../data/card.json';
+const Title = 'para você';
+const Alert = 'Cuidados diários';
 
 const options = {
-  center: false,
-  loop: false,
+  center: true,
+  loop: true,
   margin: 10,
   responsive: {
     0: {
       items: 1
     },
     600: {
-      items: 4
+      items: 3
     },
     1000: {
       items: 5
@@ -25,22 +25,35 @@ const options = {
 export default ({ promotions }) => {
   return (
     <>
-      <p className="text-default">
-        <a className="text-teal-600">{Alert}</a> {Title}
-      </p>
-      <Container>
-        <OwlCarousel options={options}>
-          {
-            promotions.map(promotions => (
-              <Product
-                nome={promotions.nome}
-                precoMaior={promotions.precoMaior}
-                preco={promotions.preco} />
-            ))
-          }
-        </OwlCarousel>
-      </Container>
-      <Adverts />
+      <div>
+        <p className="text-default">
+          <a className="text-teal-600">{Alert}</a> {Title}
+        </p>
+        <Container>
+          <OwlCarousel options={options}>
+            {data.map(promotions => <Product product={promotions} />)}
+          </OwlCarousel>
+        </Container>
+      </div>
+
+      <Adverts banner={"banner4.png"} banner2={"banner5.png"} />
+
+      <div>
+        <p className="text-default">
+          <a className="text-teal-600"> Lançamentos </a>
+        </p>
+        <Container>
+          <OwlCarousel options={options}>
+            {data.map(promotions => <Product product={promotions} />)}
+          </OwlCarousel>
+        </Container>
+        <Container className="mt-5">
+          <OwlCarousel options={options}>
+            {data.map(promotions => <Product product={promotions} />)}
+          </OwlCarousel>
+        </Container>
+      </div>
+      <Adverts banner={"banner6.png"} />
     </>
   )
 }

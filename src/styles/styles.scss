@@ -8,7 +8,7 @@
    * Navbar
    * ======================================================================== */
 nav {
-  @apply max-w-screen-xl mx-auto flex justify-between overflow-hidden h-20;
+  @apply max-w-screen-xl mx-auto flex justify-between  h-20;
 
   button {
     @apply bg-transparent text-white h-10 w-10;

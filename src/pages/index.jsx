@@ -41,7 +41,7 @@ const Index = () => {
       <Delivery />
       <Promotions promotions={promotions} />
 
-      {/* <Products promotions={promotions} /> */}
+      <Products promotions={promotions}/>
       {/* <Adverts /> */}
     </Layout>
   );

@@ -34,7 +34,7 @@ export default ({ promotions }) => {
                     {promotions.map(promotions => <Product product={promotions} />)}
                 </OwlCarousel>
             </Container>
-            <Adverts />
+            <Adverts banner={"banner3.jpg"}/>
         </>
     )
 }

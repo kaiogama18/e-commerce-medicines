@@ -1,7 +1,11 @@
+$grey: #3e3e3e;
+$text_color_default: $grey;
+$color-default: #1e2832;
 
+// #23234a 
 .categories{
     color:  white !important;
-    background-color: #23234a !important;
+    background-color: $color-default !important;
     .text{
         color:  white !important;
     }
