@@ -9,3 +9,4 @@ export { default as Search } from './Search/Search';
 export { default as Adverts } from './Adverts/Adverts.jsx';
 export { default as Promotions } from './Promotions/Promotions';
 export { default as Product } from './Product/Product';
+export { default as RelatedProducts } from './RelatedProducts/RelatedProducts ';

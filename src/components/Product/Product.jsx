@@ -4,11 +4,15 @@ import styles from "./Product.module.scss"
 
 const btn = 'COMPRAR';
 
+const backUrl = '/some/other/value'
+
+
 export default ({ product }) => {
     return (
         <Card variant="outlined" >
             <CardActionArea>
-                <Link href="/details">
+                <Link href="/details" params={{ testvalue: "hello" }}>
+                {/* <Link to={{ pathname: `/${{ testvalue: "teste" }}`, query: "/details" }}  > */}
                     <CardMedia
                         component="img"
                         alt={product.nome}
@@ -31,7 +35,7 @@ export default ({ product }) => {
                     {btn}
                 </Button>
             </CardActions>
-        </Card>
+        </Card >
 
     )
 

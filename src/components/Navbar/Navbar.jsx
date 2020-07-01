@@ -1,7 +1,7 @@
 import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
-
+import styles from "./Navbar.module.scss"
 class Navbar extends React.Component {
 
   
@@ -23,7 +23,7 @@ class Navbar extends React.Component {
           <nav>
             <div className="flex-center">
               <Link href="/">
-                <img className="mr-10" src={data.logo_src} alt={data.logo_name} />
+              <img className={styles.imgLogo} src={data.logo_src} alt={data.logo_name} />
               </Link>
               <Search />
             </div>
