@@ -8,11 +8,13 @@ $color-default: #1e2832;
 
 .carItem {
     display: flex;
-    color: white;
-    padding:  0.8rem ;
+    color: white !important;
+    justify-content: center;
+    padding:  0.8em ;
     align-items: center;
-    background-color: $color-btn ;
-    border-radius: 0.5rem;
+    background-color: $color-btn !important;
+    border-color: transparent !important;
+    border-radius: 0.5rem !important;
 }
 
 .navLogin{
