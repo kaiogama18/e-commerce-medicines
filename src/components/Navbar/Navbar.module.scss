@@ -1,3 +1,29 @@
+$color-btn: #38b2ac;
+$color-default: #1e2832;
 .imgLogo {
+    cursor: pointer;
     margin-right: 2.5rem;
-    cursor: pointer;}
+}
+
+.carItem {
+    display: flex;
+    color: white;
+    padding:  1rem ;
+    align-items: center;
+    background-color: $color-btn ;
+}
+
+.navLogin{
+    display: flex;
+    padding:  0.2rem ;
+    background-color: #f7f7f7;
+    a {
+        font-weight: bold;
+        color: $color-btn !important;
+    }
+}
+
+.divider{
+    margin: 0 0.5rem !important;
+}
+

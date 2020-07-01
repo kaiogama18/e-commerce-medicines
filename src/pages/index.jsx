@@ -40,9 +40,7 @@ const Index = () => {
       <Banner bannes={bannes} />
       <Delivery />
       <Promotions promotions={promotions} />
-
       <Products promotions={promotions}/>
-      {/* <Adverts /> */}
     </Layout>
   );
 }

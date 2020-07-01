@@ -2,9 +2,12 @@ import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
 import styles from "./Navbar.module.scss"
+import { Badge, Grid, Typography, Container, Divider, Button, ButtonGroup } from '@material-ui/core';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+
 class Navbar extends React.Component {
 
-  
+
   render() {
     const data = {
       logo_src: '/logo-Wedo-mini.png',
@@ -14,36 +17,46 @@ class Navbar extends React.Component {
       login_user: 'account_circle',
     };
 
-    
-
-
     return (
       <>
+        <div className={styles.navLogin}>
+          <Container >
+            <Grid container alignItems="center" spacing={3}>
+              <Grid item xs>
+                <Typography variant="overline"> BEM-VINDO, FAÇA SEU
+                  <Link href="#"> LOGIN </Link>
+                  OU
+                  <Link href="#"> CADASTRE-SE </Link>
+                </Typography>
+              </Grid>
+              <Grid container justify="center" item xs>
+                <Typography variant="overline"> Vendas sujeitas à análise e confirmação de dados </Typography>
+              </Grid>
+              <Grid container justify="flex-end"  item xs>
+                <div className="flex">
+                  <Button variant="overline"> MEUS PEDIDOS </Button>
+                  <Divider orientation="vertical" flexItem className={styles.divider} />
+                  <Button variant="overline"> MINHA CONTA </Button>
+                </div>
+              </Grid>
+            </Grid>
+          </Container>
+        </div>
+        <Divider />
         <Breakpoint medium up>
           <nav>
             <div className="flex-center">
               <Link href="/">
-              <img className={styles.imgLogo} src={data.logo_src} alt={data.logo_name} />
+                <img className={styles.imgLogo} src={data.logo_src} alt={data.logo_name} />
               </Link>
               <Search />
             </div>
             <div className="flex">
-              <div className="flex items-center mr-5 loginn">
-                <span className="material-icons text-4xl mr-3">
-                  {data.login_user}
-                </span>
-                <p>
-                  Faça o login <br /> ou registre-se
-                </p>
-              </div>
-              <div className="btn-car">
-                <button className="material-icons text-4xl mr-3">
-                  {data.shopping_cart}
-                </button>
-                <p>
-                  0 Itens <br />
-                  R$ 0,00
-                </p>
+              <div className={styles.carItem}>
+                <Badge className="mr-5" badgeContent={1} color="primary">
+                  <ShoppingBasketIcon />
+                </Badge>
+                <Typography variant="h6" style={{ fontWeight: 500 }}> R$ 0,00 </Typography>
               </div>
             </div>
           </nav>
