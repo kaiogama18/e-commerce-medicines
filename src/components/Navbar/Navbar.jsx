@@ -44,7 +44,7 @@ class Navbar extends React.Component {
         </div>
         <Divider />
         <Breakpoint medium up>
-          <AppBar className={styles.navbar} position="static">
+          <AppBar className={styles.navbar} variant="outlined" position="static">
             <Toolbar>
               <Container>
                 <Grid container alignItems="center" spacing={3}>
