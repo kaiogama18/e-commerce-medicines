@@ -3,6 +3,7 @@ $color-default: #1e2832;
 .imgLogo {
     cursor: pointer;
     margin-right: 2.5rem;
+    width: 12rem !important;
 }
 
 .carItem {
@@ -27,3 +28,7 @@ $color-default: #1e2832;
     margin: 0 0.5rem !important;
 }
 
+
+.navbar{
+    background-color: white !important;
+}

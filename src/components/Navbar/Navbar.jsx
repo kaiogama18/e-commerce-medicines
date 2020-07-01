@@ -2,7 +2,7 @@ import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
 import styles from "./Navbar.module.scss"
-import { Badge, Grid, Typography, Container, Divider, Button, ButtonGroup } from '@material-ui/core';
+import { Badge, Grid, Typography, Container, Divider, Button, ButtonGroup, AppBar, Toolbar, CardMedia } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 class Navbar extends React.Component {
@@ -32,7 +32,7 @@ class Navbar extends React.Component {
               <Grid container justify="center" item xs>
                 <Typography variant="overline"> Vendas sujeitas à análise e confirmação de dados </Typography>
               </Grid>
-              <Grid container justify="flex-end"  item xs>
+              <Grid container justify="flex-end" item xs>
                 <div className="flex">
                   <Button variant="overline"> MEUS PEDIDOS </Button>
                   <Divider orientation="vertical" flexItem className={styles.divider} />
@@ -44,7 +44,41 @@ class Navbar extends React.Component {
         </div>
         <Divider />
         <Breakpoint medium up>
-          <nav>
+          <AppBar className={styles.navbar} position="static">
+            <Toolbar>
+              <Container>
+                <Grid container alignItems="center" spacing={3}>
+                  <Grid item xs>
+                    <Link href="/">
+                      <CardMedia
+                      className={styles.imgLogo}
+                        component="img"
+                        alt={data.logo_name}
+                        image={data.logo_src}
+                        title={data.logo_name}
+                      />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={8}>
+                    <Search />
+                  </Grid>
+                  <Grid item container justify="flex-end" xs>
+                    <div className={styles.carItem}>
+                      <Badge className="mr-5" badgeContent={1} color="primary">
+                        <ShoppingBasketIcon />
+                      </Badge>
+                      <Typography variant="h6" style={{ fontWeight: 500 }}> R$ 0,00 </Typography>
+                    </div>
+                  </Grid>
+
+                </Grid>
+              </Container>
+
+            </Toolbar>
+
+          </AppBar>
+
+          {/* <nav>
             <div className="flex-center">
               <Link href="/">
                 <img className={styles.imgLogo} src={data.logo_src} alt={data.logo_name} />
@@ -59,7 +93,8 @@ class Navbar extends React.Component {
                 <Typography variant="h6" style={{ fontWeight: 500 }}> R$ 0,00 </Typography>
               </div>
             </div>
-          </nav>
+          </nav> */}
+
         </Breakpoint>
         <Breakpoint small down>
           <nav>
