@@ -9,9 +9,10 @@ $color-default: #1e2832;
 .carItem {
     display: flex;
     color: white;
-    padding:  1rem ;
+    padding:  0.8rem ;
     align-items: center;
     background-color: $color-btn ;
+    border-radius: 0.5rem;
 }
 
 .navLogin{
