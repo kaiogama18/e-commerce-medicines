@@ -12,11 +12,11 @@ export default ({ product }) => {
         <Card variant="outlined" >
             <CardActionArea>
                 <Link href="/details" params={{ testvalue: "hello" }}>
-                {/* <Link to={{ pathname: `/${{ testvalue: "teste" }}`, query: "/details" }}  > */}
                     <CardMedia
                         component="img"
                         alt={product.nome}
                         image="img/no-photo.svg"
+                        // image={product.foto}
                         title={product.nome}
                     />
                 </Link>

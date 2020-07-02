@@ -48,7 +48,7 @@ function Navbar(props) {
               </Typography>
             </Grid>
             <Grid container justify="center" item xs>
-              <Typography variant="overline"> Vendas sujeitas à análise e confirmação de dados </Typography>
+              <Typography variant="overline"> Vendas sujeitas à confirmação de dados </Typography>
             </Grid>
             <Grid container justify="flex-end" item xs>
               <div className="flex">
