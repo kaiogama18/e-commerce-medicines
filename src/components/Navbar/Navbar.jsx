@@ -1,11 +1,11 @@
 import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
-import styles from "./Navbar.module.scss"
+
 import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, useScrollTrigger, Slide } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import PropTypes from 'prop-types';
-
+import styles from "./Navbar.module.scss"
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -85,7 +85,7 @@ function Navbar(props) {
                       <Badge className="mr-5" badgeContent={1} color="primary">
                         <ShoppingBasketIcon />
                       </Badge>
-                      <Typography variant="h6" style={{ fontWeight: 500 }}> R$ 1,00 </Typography>
+                      <Typography variant="h6"> R$ 1,00 </Typography>
                     </Paper>
                   </Grid>
                 </Grid>
