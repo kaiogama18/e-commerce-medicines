@@ -1,7 +1,6 @@
-import { Categories, Banner, Products, Layout, WedoApp } from '../components';
+import { Categories, Banner, Products, Layout, WedoApp, Promotions } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
-import Promotions from '../components/Promotions/Promotions';
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
