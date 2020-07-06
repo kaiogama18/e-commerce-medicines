@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box } from "@material-ui/core"
+import { Container, Grid, Typography, Box, Link } from "@material-ui/core"
 import styles from "./WedoApp.module.scss"
 
 export default () => {
@@ -17,7 +17,9 @@ export default () => {
               <Grid container xs="auto" spacing={3}>
                 {WedoApp.store.map((img) => (
                   <Grid item>
-                    <img className="w-40" src={img.src} />
+                    <Link href={img.href}>
+                      <img className="w-40" src={img.src} />
+                    </Link>
                   </Grid>
                 ))}
               </Grid>
@@ -37,10 +39,12 @@ const WedoApp = {
   "imgApp": "/img/wedoapp/app.png",
   "store": [
     {
-      src: "/img/wedoapp/Google-store.png"
+      src: "/img/wedoapp/Google-store.png",
+      href: "https://play.google.com/store"
     },
     {
-      src: "/img/wedoapp/Apple-store.png"
+      src: "/img/wedoapp/Apple-store.png",
+      href: "https://play.google.com/store"
     },
   ]
 };

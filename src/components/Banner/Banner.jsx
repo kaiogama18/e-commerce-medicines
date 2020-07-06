@@ -1,23 +1,32 @@
+import OwlCarousel from "react-owl-carousel2";
+import styles from "./Banner.module.scss"
+// import { Carousel } from 'react-responsive-carousel';
+
 import data from '../../data/banner.json';
-import { Carousel } from 'react-responsive-carousel';
+const options = {
+  center: true,
+  loop: true,
+  autoplay:true,
+  autoplayTimeout:3000,
+  autoplayHoverPause:true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+};
 
-function ImgBanner(props) {
+export default () => {
   return (
-    <Carousel
-      showArrows={true}
-      dynamicHeight={true}
-      showThumbs={false}
-      autoPlay={true}
-      infiniteLoop={true}
-      showStatus={false}
-      emulateTouch={true}
-      showIndicators={false}
-    >
-      {props.bannes.map(banner => { return <img src={banner.url_banner} draggable="false" /> })}
-    </Carousel>
-  );
+
+    <OwlCarousel options={options} >
+      {data.map(banner => <img src={banner.url_banner} className={styles.banner} />)}
+    </OwlCarousel>
+  )
 }
-
-const Banner = ({ bannes }) => { return <ImgBanner bannes={data} />; }
-
-export default Banner;

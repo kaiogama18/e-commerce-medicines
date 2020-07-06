@@ -1,5 +1,5 @@
 import OwlCarousel from "react-owl-carousel2";
-import { Container } from "@material-ui/core";
+import { Container, Box } from "@material-ui/core";
 import { Adverts, Product } from "..";
 
 const Title = 'MELHORES OFERTAS DO MÊS DE JUNHO';
@@ -25,17 +25,17 @@ const options = {
 
 export default ({ promotions }) => {
     return (
-        <>
+        <Container>
             <p className="text-default">
                 <a className="text-teal-600">{Alert}</a> {Title}
             </p>
-            <Container>
+            <Box>
                 <OwlCarousel options={options}>
                     {promotions.map(promotions => <Product product={promotions} />)}
                 </OwlCarousel>
-            </Container>
-            <Adverts banner={"banner3.jpg"}/>
-        </>
+            </Box>
+            <Adverts banner={"banner3.jpg"} />
+        </Container>
     )
 }
 
