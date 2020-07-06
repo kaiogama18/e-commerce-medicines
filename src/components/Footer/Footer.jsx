@@ -40,7 +40,7 @@ const Footer = () => {
           <Grid item xs>
             <Typography variant="h5" className={styles.footerTilte}> Segurança </Typography>
             <div className="mt-2">
-              <img className="w-24" src='/safety/medalha_ouro_otima.png' />
+              <img className="w-24" src='Img/Safety/medalha_ouro_otima.png' />
             </div>
           </Grid>
         </Grid>
@@ -54,7 +54,7 @@ const Footer = () => {
             <Grid container justify="center" xs="auto" spacing={3}>
               {Social.map((logo) => (
                 <Grid item>
-                  <img className="w-10" src={logo.src} />
+                  <img className={styles.social} src={logo.src} />
                 </Grid>
               ))}
             </Grid>
@@ -117,19 +117,19 @@ const Pagmaneto = [
     "data": [
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_bbrasil.png'
+        src: 'Img/Cash/pag_bbrasil.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_boleto.png'
+        src: 'Img/Cash/pag_boleto.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_bradesco.png'
+        src: 'Img/Cash/pag_bradesco.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_itau.png'
+        src: 'Img/Cash/pag_itau.png'
       },
     ]
   },
@@ -138,27 +138,27 @@ const Pagmaneto = [
     "data": [
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_dclub.png'
+        src: 'Img/Cash/pag_dclub.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_visa.png'
+        src: 'Img/Cash/pag_visa.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_elo.png'
+        src: 'Img/Cash/pag_elo.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_american.png'
+        src: 'Img/Cash/pag_american.png'
       },
       {
         alt: 'mastercard-logo',
-        src: '/cash/pag_dclub.png'
+        src: 'Img/Cash/pag_dclub.png'
       },
       {
         alt: 'hiper-logo',
-        src: '/cash/pag_hiper.png'
+        src: 'Img/Cash/pag_hiper.png'
       },
     ]
   }
@@ -166,13 +166,13 @@ const Pagmaneto = [
 
 const Social = [
   {
-    src: '/social/facebook.svg'
+    src: 'Img/Social/facebook.svg'
   },
   {
-    src: '/social/instagram.svg'
+    src: 'Img/Social/instagram.svg'
   },
   {
-    src: '/social/youtube.svg'
+    src: 'Img/Social/youtube.svg'
   },
 
 ];

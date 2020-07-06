@@ -7,15 +7,15 @@ export default ({ banner, banner2 }) => {
                 {
                     !banner2 ?
                         <Grid item xs={12}>
-                            <img src={"/products/" + banner} />
+                            <img src={"/Img/Products/" + banner} />
                         </Grid> :
                         <Container className="mt-10">
                             <Grid container spacing={3}>
                                 <Grid item xs={12} sm={6}>
-                                    <img src={"/products/" + banner} />
+                                    <img src={"/Img/Products/" + banner} />
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <img src={"/products/" + banner2} />
+                                    <img src={"/Img/Products/" + banner2} />
                                 </Grid>
                             </Grid>
                         </Container>

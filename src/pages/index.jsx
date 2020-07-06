@@ -1,4 +1,4 @@
-import { Categories, Banner, Products, Layout, Adverts } from '../components';
+import { Categories, Banner, Products, Layout, WedoApp } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 import Promotions from '../components/Promotions/Promotions';
@@ -17,9 +17,7 @@ function Delivery() {
   );
 }
 
-
 const Index = () => {
-
   const route = '/produto/oferta';
   const [categories, setCategories] = useState([]);
   const [bannes, setBannes] = useState([]);
@@ -40,7 +38,8 @@ const Index = () => {
       <Banner bannes={bannes} />
       <Delivery />
       <Promotions promotions={promotions} />
-      <Products promotions={promotions}/>
+      <Products promotions={promotions} />
+      <WedoApp /> 
     </Layout>
   );
 }

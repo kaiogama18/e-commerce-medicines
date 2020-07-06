@@ -21,7 +21,7 @@ export default ({ params }) => {
             <CardMedia
               component="img"
               alt="{product.nome}"
-              image="img/no-photo.svg"
+              image="Img/no-photo.svg"
               title="{product.nome}"
             />
           </Grid>

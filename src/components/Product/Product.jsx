@@ -15,7 +15,7 @@ export default ({ product }) => {
                     <CardMedia
                         component="img"
                         alt={product.nome}
-                        image="img/no-photo.svg"
+                        image="Img/no-photo.svg"
                         // image={product.foto}
                         title={product.nome}
                     />

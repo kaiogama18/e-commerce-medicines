@@ -53,7 +53,7 @@ export default ({ promotions }) => {
           </OwlCarousel>
         </Container>
       </div>
-      <Adverts banner={"banner6.png"} />
+      {/* <Adverts banner={"banner6.png"} /> */}
     </>
   )
 }

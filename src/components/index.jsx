@@ -10,3 +10,5 @@ export { default as Adverts } from './Adverts/Adverts.jsx';
 export { default as Promotions } from './Promotions/Promotions';
 export { default as Product } from './Product/Product';
 export { default as RelatedProducts } from './RelatedProducts/RelatedProducts ';
+export { default as WedoApp } from './WedoApp/WedoApp';
+
