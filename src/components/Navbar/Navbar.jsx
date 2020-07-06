@@ -28,7 +28,7 @@ ElevationScroll.propTypes = {
 function Navbar(props) {
 
   const data = {
-    logo_src: '/Img/logo-Wedo-mini.png',
+    logo_src: '/img/logo-Wedo-mini.png',
     logo_name: 'WEDO MARKET',
     menu_hamburguer: 'menu',
     shopping_cart: 'shopping_basket',

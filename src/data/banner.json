@@ -2,16 +2,16 @@
   {
     "id": 3702,
     "name": "banner generico",
-    "url_banner": "Img/Banner/1.png"
+    "url_banner": "/img/banner/1.png"
   },
   {
     "id": 3707,
     "name": "banner generico",
-    "url_banner": "Img/Banner/2.png"
+    "url_banner": "/img/banner/2.png"
   },
   {
     "id": 3714,
     "name": "banner generico",
-    "url_banner": "Img/Banner/3.png"
+    "url_banner": "/img/banner/3.png"
   }
 ]

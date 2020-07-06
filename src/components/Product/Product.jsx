@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Card, CardActionArea, CardMedia, makeStyles, CardContent, Typography, Button, CardActions } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions } from '@material-ui/core';
 import styles from "./Product.module.scss"
 
 const btn = 'COMPRAR';
@@ -15,7 +15,7 @@ export default ({ product }) => {
                     <CardMedia
                         component="img"
                         alt={product.nome}
-                        image="Img/no-photo.svg"
+                        image="/img/no-photo.svg"
                         // image={product.foto}
                         title={product.nome}
                     />
