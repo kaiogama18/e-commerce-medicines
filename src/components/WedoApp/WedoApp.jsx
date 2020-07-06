@@ -34,13 +34,13 @@ const WedoApp = {
   "subtitle1": 'Baixe nosso',
   "title": 'Aplicativo',
   "subtitle2": 'Comprar Seu Medicamento Ficou Mais Fácil',
-  "imgApp": "/img/wedoApp/app.png",
+  "imgApp": "/img/wedoapp/app.png",
   "store": [
     {
-      src: "/img/wedoApp/Google-store.png"
+      src: "/img/wedoapp/Google-store.png"
     },
     {
-      src: "/img/wedoApp/Apple-store.png"
+      src: "/img/wedoapp/Apple-store.png"
     },
   ]
 };
