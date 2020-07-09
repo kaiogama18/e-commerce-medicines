@@ -9,7 +9,7 @@ const backUrl = '/some/other/value'
 
 export default ({ product }) => {
     return (
-        <Card variant="outlined" >
+        <Card variant="outlined">
             <CardActionArea>
                 <Link href="/details" params={{ testvalue: "hello" }}>
                     <CardMedia

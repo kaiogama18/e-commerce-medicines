@@ -1,11 +1,12 @@
 import styles from "./Footer.module.scss"
-import { Grid, Container, Typography, Avatar } from "@material-ui/core";
+import { Grid, Container, Typography, Avatar, Divider } from "@material-ui/core";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <Divider/>
       <Container>
-        <Grid  container justify="center" xs="auto" spacing={3}>
+        <Grid container justify="center" xs="auto" spacing={3}>
 
           <Grid item xs>
             <Typography variant="h5" className={styles.footerTilte}> Institucional </Typography>
@@ -50,7 +51,7 @@ const Footer = () => {
         <Container>
           <Typography variant="h6" className={styles.describre}> Acompanhe-nos nas redes sociais </Typography>
 
-          <div className="mt-2">
+          <div className="mt-1">
             <Grid container justify="center" xs="auto" spacing={3}>
               {Social.map((logo) => (
                 <Grid item>
