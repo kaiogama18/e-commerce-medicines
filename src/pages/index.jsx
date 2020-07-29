@@ -36,7 +36,7 @@ const Index = () => {
       <Categories categories={categories} />
       <Banner bannes={bannes} />
       <Delivery />
-      <Promotions promotions={promotions} />
+      {/* <Promotions promotions={promotions} /> */}
       <Products promotions={promotions} />
       {/* <WedoApp /> */}
     </Layout>

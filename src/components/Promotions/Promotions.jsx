@@ -34,11 +34,7 @@ export default ({ promotions }) => {
                 {promotions.map(promotions => <Grid item xs={6}><Product product={promotions} />  </Grid>)}
             </Grid>
 
-            {/* <Box>
-                <OwlCarousel options={options}>
-                    {promotions.map(promotions => <Product product={promotions} />)}
-                </OwlCarousel>
-            </Box> */}
+        
             <Adverts banner={"banner3.jpg"} />
         </Container>
     )
