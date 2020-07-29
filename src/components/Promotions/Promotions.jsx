@@ -1,27 +1,8 @@
-import OwlCarousel from "react-owl-carousel2";
-import { Container, Box, Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { Adverts, Product } from "..";
 
 const Title = 'MELHORES OFERTAS DO MÊS DE JUNHO';
 const Alert = 'PRORROGADO!';
-
-// const options = {
-//     center: true,
-//     loop: false,
-//     rtl: true,
-//     margin: 10,
-//     responsive: {
-//         0: {
-//             items: 2
-//         },
-//         600: {
-//             items: 2
-//         },
-//         1000: {
-//             items: 5
-//         }
-//     }
-// };
 
 export default ({ promotions }) => {
     return (
@@ -34,7 +15,6 @@ export default ({ promotions }) => {
                 {promotions.map(promotions => <Grid item xs={6}><Product product={promotions} />  </Grid>)}
             </Grid>
 
-        
             <Adverts banner={"banner3.jpg"} />
         </Container>
     )

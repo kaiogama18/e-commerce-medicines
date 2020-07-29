@@ -29,11 +29,16 @@ export default ({ promotions }) => {
         <p className="text-default">
           <a className="text-teal-600">{Alert}</a> {Title}
         </p>
-        <Container>
+        {/* <Container>
           <OwlCarousel options={optionsP}>
             {data.map(promotions => <Product product={promotions} />)}
           </OwlCarousel>
-        </Container>
+        </Container> */}
+
+        <Grid container spacing={3} lg={12} sm={'auto'}>
+          {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
+        </Grid>
+
       </Box>
 
       <Adverts banner={"banner4.png"} banner2={"banner5.png"} />
@@ -42,21 +47,11 @@ export default ({ promotions }) => {
         <p className="text-default">
           <a className="text-teal-600"> Lançamentos </a>
         </p>
-        {/* <Container> */}
 
-          <Grid container spacing={3} lg={12} sm={'auto'}>
-            {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
-          </Grid>
+        <Grid container spacing={3} lg={12} sm={'auto'}>
+          {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
+        </Grid>
 
-          {/* <OwlCarousel options={optionsP}>
-            {data.map(promotions => <Product product={promotions} />)}
-          </OwlCarousel> */}
-        {/* </Container> */}
-        {/* <Container className="mt-5">
-          <OwlCarousel options={optionsP}>
-            {data.map(promotions => <Product product={promotions} />)}
-          </OwlCarousel>
-        </Container> */}
       </Box>
     </Container>
   )
