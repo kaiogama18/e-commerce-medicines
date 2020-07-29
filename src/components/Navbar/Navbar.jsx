@@ -1,19 +1,17 @@
 import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
-
-import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, useScrollTrigger, Box } from '@material-ui/core';
+import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import PropTypes from 'prop-types';
 import styles from "./Navbar.module.scss"
-import Login from '../Login/Login';
+import NavLogin from '../NavLogin/NavLogin';
 
 export default () => {
 
   return (
     <>
       <Breakpoint medium up>
-        {/* <Login /> */}
+        <NavLogin />
         <AppBar className={styles.navbar} variant="outlined" position="static">
           <Toolbar>
             <Container>
