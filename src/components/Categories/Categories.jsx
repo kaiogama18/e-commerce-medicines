@@ -2,7 +2,7 @@ import { Breakpoint } from 'react-socks';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import data from '../../data/category.json';
 import { Container, AppBar, Tabs, Tab } from '@material-ui/core';
-import styles from "./Categories.module.scss"
+import stylesCat from "./Categories.module.scss"
 
 function CarouselCategory(props) {
   return (
@@ -50,7 +50,7 @@ const Categories = ({ categories }) => {
   return (
     <div >
       <Breakpoint medium up>
-        <AppBar position="static" color="default" className={styles.categories}>
+        <AppBar position="static" color="default" className={stylesCat.categories}>
           <Container>
             <Tabs
               // value={value}
@@ -62,7 +62,7 @@ const Categories = ({ categories }) => {
               aria-label="scrollable auto tabs example"
             >
               {categories.map(category => (
-                <Tab label={category.nome} className={styles.text} />
+                <Tab label={category.nome} className={stylesCat.text} />
               ))}
             </Tabs>
           </Container>

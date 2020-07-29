@@ -1,6 +1,5 @@
 import OwlCarousel from "react-owl-carousel2";
 import styles from "./Banner.module.scss"
-// import { Carousel } from 'react-responsive-carousel';
 
 import data from '../../data/banner.json';
 const options = {
@@ -8,7 +7,6 @@ const options = {
   loop: true,
   autoplay:true,
   autoplayTimeout:3000,
-  // autoplayHoverPause:true,
   responsive: {
     0: {
       items: 1
