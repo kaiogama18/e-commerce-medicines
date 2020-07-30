@@ -6,16 +6,16 @@ export default () => {
     <Container className="mt-10">
       <Grid container xs="auto" spacing={3}>
         <Grid item xs>
-          <img className="w-4/5" src={WedoApp.imgApp} />
+          <img className="w-4/5" src={WedoApps.imgApp} />
         </Grid>
         <Grid item container alignItems="center" xs>
           <Box>
-            <Typography variant="h5"> {WedoApp.subtitle1} </Typography>
-            <Typography variant="h2" className={styles.title}> {WedoApp.title} </Typography>
-            <Typography variant="h5"> {WedoApp.subtitle2}  </Typography>
+            <Typography variant="h5"> {WedoApps.subtitle1} </Typography>
+            <Typography variant="h2" className={styles.title}> {WedoApps.title} </Typography>
+            <Typography variant="h5"> {WedoApps.subtitle2}  </Typography>
             <Box className="mt-5">
               <Grid container xs="auto" spacing={3}>
-                {WedoApp.store.map((img) => (
+                {WedoApps.store.map((img) => (
                   <Grid item>
                     <Link href={img.href}>
                       <img className="w-40" src={img.src} />
@@ -32,7 +32,7 @@ export default () => {
 }
 
 
-const WedoApp = {
+const WedoApps = {
   "subtitle1": 'Baixe nosso',
   "title": 'Aplicativo',
   "subtitle2": 'Comprar Seu Medicamento Ficou Mais Fácil',
