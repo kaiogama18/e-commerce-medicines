@@ -1,5 +1,9 @@
 import { Container, Grid, Typography, Box, Link } from "@material-ui/core"
-import styles from "./WedoApp.module.scss"
+
+// .title {
+//   color: #38b2ac !important;
+//   font-weight: bold !important;
+// }
 
 export default () => {
   return (
@@ -11,7 +15,7 @@ export default () => {
         <Grid item container alignItems="center" xs>
           <Box>
             <Typography variant="h5"> {WedoApps.subtitle1} </Typography>
-            <Typography variant="h2" className={styles.title}> {WedoApps.title} </Typography>
+            <Typography variant="h2" className="text-teal-500"> {WedoApps.title} </Typography>
             <Typography variant="h5"> {WedoApps.subtitle2}  </Typography>
             <Box className="mt-5">
               <Grid container xs="auto" spacing={3}>
