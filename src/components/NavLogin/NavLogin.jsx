@@ -1,4 +1,4 @@
-import { Grid, Typography, Container, Divider, Button, Box } from '@material-ui/core';
+import { Grid, Typography, Container, Divider, Button } from '@material-ui/core';
 import styles from "./NavLogin.module.scss"
 
 export default () => {
@@ -16,11 +16,11 @@ export default () => {
                         <Typography variant="overline"> {data.warning} </Typography>
                     </Grid>
                     <Grid container justify="flex-end" item xs>
-                        <Box className="flex">
+                        <div className="flex">
                             <Button variant="overline"> {data.my_requests} </Button>
                             <Divider orientation="vertical" flexItem className={styles.divider} />
                             <Button variant="overline"> {data.my_account} </Button>
-                        </Box>
+                        </div>
                     </Grid>
                 </Grid>
             </Container>

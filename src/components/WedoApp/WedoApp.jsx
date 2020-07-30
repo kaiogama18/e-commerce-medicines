@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box, Link } from "@material-ui/core"
+import { Container, Grid, Typography, Link } from "@material-ui/core"
 
 // .title {
 //   color: #38b2ac !important;
@@ -6,6 +6,25 @@ import { Container, Grid, Typography, Box, Link } from "@material-ui/core"
 // }
 
 export default () => {
+
+  const WedoApps = {
+    "subtitle1": 'Baixe nosso',
+    "title": 'Aplicativo',
+    "subtitle2": 'Comprar Seu Medicamento Ficou Mais Fácil',
+    "imgApp": "/img/wedoapp/app.png",
+    "store": [
+      {
+        src: "/img/wedoapp/Google-store.png",
+        href: "https://play.google.com/store"
+      },
+      {
+        src: "/img/wedoapp/Apple-store.png",
+        href: "https://play.google.com/store"
+      },
+    ]
+  };
+
+
   return (
     <Container className="mt-10">
       <Grid container xs="auto" spacing={3}>
@@ -13,11 +32,11 @@ export default () => {
           <img className="w-4/5" src={WedoApps.imgApp} />
         </Grid>
         <Grid item container alignItems="center" xs>
-          <Box>
+          <div>
             <Typography variant="h5"> {WedoApps.subtitle1} </Typography>
             <Typography variant="h2" className="text-teal-500"> {WedoApps.title} </Typography>
             <Typography variant="h5"> {WedoApps.subtitle2}  </Typography>
-            <Box className="mt-5">
+            <div className="mt-5">
               <Grid container xs="auto" spacing={3}>
                 {WedoApps.store.map((img) => (
                   <Grid item>
@@ -27,8 +46,8 @@ export default () => {
                   </Grid>
                 ))}
               </Grid>
-            </Box>
-          </Box>
+            </div>
+          </div>
         </Grid>
       </Grid>
     </Container>
@@ -36,19 +55,3 @@ export default () => {
 }
 
 
-const WedoApps = {
-  "subtitle1": 'Baixe nosso',
-  "title": 'Aplicativo',
-  "subtitle2": 'Comprar Seu Medicamento Ficou Mais Fácil',
-  "imgApp": "/img/wedoapp/app.png",
-  "store": [
-    {
-      src: "/img/wedoapp/Google-store.png",
-      href: "https://play.google.com/store"
-    },
-    {
-      src: "/img/wedoapp/Apple-store.png",
-      href: "https://play.google.com/store"
-    },
-  ]
-};

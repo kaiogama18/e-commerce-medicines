@@ -1,5 +1,4 @@
-import OwlCarousel from "react-owl-carousel2";
-import { Container, Box, Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { Adverts, Product } from "..";
 import data from '../../data/card.json';
 const Title = 'para você';
@@ -25,7 +24,7 @@ const optionsP = {
 export default ({ promotions }) => {
   return (
     <Container>
-      <Box>
+      <div>
         <p className="text-default">
           <a className="text-teal-600">{Alert}</a> {Title}
         </p>
@@ -39,11 +38,11 @@ export default ({ promotions }) => {
           {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
         </Grid>
 
-      </Box>
+      </div>
 
       <Adverts banner={"banner4.png"} banner2={"banner5.png"} />
 
-      <Box>
+      <div>
         <p className="text-default">
           <a className="text-teal-600"> Lançamentos </a>
         </p>
@@ -52,7 +51,7 @@ export default ({ promotions }) => {
           {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
         </Grid>
 
-      </Box>
+      </div>
     </Container>
   )
 }
