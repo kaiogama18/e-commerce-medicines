@@ -44,52 +44,44 @@ function Search() {
 
 
   return (
-    <div className={styles.containerSearch}>
-      <div className={styles.search}>
-        <div className="mr-2">
-          <SearchIcon className={styles.searchIcon} />
-        </div>
+    <Autocomplete
+      className={styles.containerSearch}
+      open={open}
+      onOpen={() => {
+        setOpen(true);
+      }}
+      onClose={() => {
+        setOpen(false);
+      }}
+      getOptionSelected={(option, value) => option.nome === value.nome}
+      getOptionLabel={(option) => option.nome}
+      options={options}
+      loading={loading}
+      renderInput={(params) => (
+        <>
+          {/* <div className={styles.search}> */}
+          {/* <div className="mr-2">
+              <SearchIcon className={styles.searchIcon} />
+            </div> */}
 
-
-        <Autocomplete
-          open={open}
-          onOpen={() => {
-            setOpen(true);
-          }}
-          onClose={() => {
-            setOpen(false);
-          }}
-          getOptionSelected={(option, value) => option.nome === value.nome}
-          getOptionLabel={(option) => option.nome}
-          options={options}
-          loading={loading}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              InputProps={{
-                ...params.InputProps,
-                endAdornment: (
-                  <Fragment>
-                    {loading ? <CircularProgress color="inherit" size={20} /> : null}
-                    {params.InputProps.endAdornment}
-                  </Fragment>
-                ),
-              }}
-            />
-          )}
-        />
-
-
-        {/* <InputBase
-          placeholder="O que você procura? "
-          classes={{
-            root: styles.inputRoot,
-            input: styles.inputInput,
-          }}
-          inputProps={{ 'aria-label': 'search' }}
-        /> */}
-      </div>
-    </div>
+          <TextField
+            {...params}
+            variant="outlined"
+            className={styles.search}
+            InputProps={{
+              ...params.InputProps,
+              endAdornment: (
+                <Fragment>
+                  {loading ? <CircularProgress color="inherit" size={20} /> : null}
+                  {params.InputProps.endAdornment}
+                </Fragment>
+              ),
+            }}
+          />
+          {/* </div> */}
+        </>
+      )}
+    />
   );
 }
 
