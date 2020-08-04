@@ -49,7 +49,6 @@ function Search() {
 
   return (
     <Autocomplete
-      className={styles.containerSearch}
       open={open}
       onOpen={() => {
         setOpen(true);

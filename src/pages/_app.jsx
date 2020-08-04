@@ -9,6 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <html lang="pt-br" />
         <title>WEDO Market</title>
         <link rel="icon" href="/favicon.ico" />
         <link
