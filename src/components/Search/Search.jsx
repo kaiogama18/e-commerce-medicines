@@ -3,10 +3,13 @@ import styles from "./Search.module.scss"
 import { useEffect, useState, Fragment } from "react"
 import SearchIcon from '@material-ui/icons/Search';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import Router from 'next/router';
 import { TextField, CircularProgress, InputAdornment, Grid, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
-// import { parse } from "@babel/core";
-// import parse from 'autosuggest-highlight/parse';
+
+export const Details = (value) => {
+  console.log(JSON.stringify(value, null, 2))
+  Router.push('/details?id=' + value.id);
+};
 
 
 function Search() {
@@ -46,7 +49,6 @@ function Search() {
 
   return (
     <>
-      {/* <div className="bg-gray-900 font-bold">{`inputValue: '${inputValue}'`}</div> */}
       <Autocomplete
         value={value}
         open={open}
@@ -106,64 +108,10 @@ function Search() {
 
         }
       />
-      {/* <div className="bg-gray-900 font-bold">{`value: ${value !== null ? `'${JSON.stringify(value, null, 2)}'` : 'null'}`}</div> */}
-
+      {value !== null ? Details(value) : null}
     </>
   );
 }
 
 export default Search;
 
-
-// return (
-//   <Autocomplete
-//     open={open}
-//     onOpen={() => {
-//       setOpen(true);
-//     }}
-//     onClose={() => {
-//       setOpen(false);
-//     }}
-
-//     getOptionSelected={(option, value) => option.nome === value.nome}
-//     getOptionLabel={((option) => (option.nome))}
-//     options={options}
-//     autoComplete
-//     includeInputInList
-//     filterSelectedOptions
-//     value={value}
-//     loading={loading}
-//     loadingText={"Carregando..."}
-//     noOptionsText={"Produto não encontrado"}
-//     onChange={(event, newValue) => {
-//       setOptions(newValue ? [newValue, ...options] : options);
-//       setValue(newValue);
-//     }}
-//     onInputChange={(event, newInputValue) => {
-//       setInputValue(newInputValue);
-//     }}
-
-//     renderInput={(params) => (
-//       <TextField
-//         {...params}
-//         variant="outlined"
-//         className={styles.search}
-//         onClick={() => console.log(`item clicked: ${"testst"}`)}
-//         InputProps={{
-//           ...params.InputProps,
-//           startAdornment: (  
-//             <InputAdornment position="start">
-//               <SearchIcon className={styles.searchIcon} />
-//             </InputAdornment>
-//           ),
-//           endAdornment: (
-//             <Fragment>
-//               {loading ? <CircularProgress color="inherit" size={20} /> : null}
-//               {params.InputProps.endAdornment}
-//             </Fragment>
-//           ),
-//         }}
-//       />
-//     )}
-//   />
-// );
