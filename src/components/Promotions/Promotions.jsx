@@ -11,10 +11,11 @@ export default ({ promotions }) => {
                 <a className="text-teal-600">{Alert}</a> {Title}
             </p>
 
-            <Grid container spacing={1} lg={5} sm={'auto'}>
-                {promotions.map(promotions => <Grid item xs={6}><Product product={promotions} />  </Grid>)}
+            <Grid container spacing={3} lg={12} sm={'auto'}>
+                {promotions.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
             </Grid>
 
+        
             <Adverts banner={"banner3.jpg"} />
         </Container>
     )

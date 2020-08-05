@@ -1,6 +1,7 @@
 import { Container, Grid } from "@material-ui/core";
 import { Adverts, Product } from "..";
 import data from '../../data/card.json';
+import data1 from '../../data/cardQ.json';
 const Title = 'para você';
 const Alert = 'Cuidados diários';
 
@@ -48,7 +49,7 @@ export default ({ promotions }) => {
         </p>
 
         <Grid container spacing={3} lg={12} sm={'auto'}>
-          {data.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
+          {data1.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
         </Grid>
 
       </div>

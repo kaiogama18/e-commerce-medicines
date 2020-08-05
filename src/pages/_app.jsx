@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
         <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       </Head>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </>
   );
 }

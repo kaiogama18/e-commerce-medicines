@@ -1,10 +1,9 @@
 import { Layout, Breadcrumb } from "../components";
-import AddIcon from '@material-ui/icons/Add';
 import { Container, CardMedia, Grid, Typography, Divider, Button, Icon, TextField, MenuItem } from "@material-ui/core";
 import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts/RelatedProducts ";
 
-export default ({ params }) => {
+export default ({ id }) => {
 
   const [currency, setCurrency] = useState(1);
 
@@ -29,7 +28,7 @@ export default ({ params }) => {
             <Typography variant="h5" className="text-blue-900" style={{ fontWeight: 500 }}> Máscara De Proteção Respiratória </Typography>
             <Divider />
             <div className="text-gray-600 mt-2">
-              <Typography variant="subtitle2"> Modelo: Pano </Typography>
+              <Typography variant="subtitle2"> Modelo: Pano  </Typography>
               <Typography variant="subtitle2"> Disponibilidade: Disponível em 2 dias úteis </Typography>
             </div>
 

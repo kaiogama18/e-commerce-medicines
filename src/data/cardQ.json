@@ -2,25 +2,25 @@
   {
     "nome": "Máscara De Proteção Respiratória",
     "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/57/1057194_mascara-em-tecido-lavavel-pacote-com-5-cinza_m2_637219533633475572.jpg",
-    "price": "6,00",
+    "preco": "6,00",
     "precoMaior": "11.58"
   },
   {
     "nome": "Álcool Em Gel 70% Pharmakos 300ml",
     "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/56/1056842_alcool-em-gel-70-pharmakos-300ml_m2_637215219042600256.jpg",
-    "price": "16,90",
+    "preco": "16,90",
     "precoMaior": "11.58"
   },
   {
     "nome": "Papel Higiênico Neve Neutro Folha Dupla",
     "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/50/1050382_papel-higienico-neve-neutro-folha-dupla-30-metros-_m1_637162686849781835",
-    "price": "9,50",
+    "preco": "9,50",
     "precoMaior": "11.58"
   },
   {
     "nome": "Lavitan Mais Hair 60 Cápsulas",
     "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/33/1033913_lavitan-mais-hair-60-capsulas_m1_637117983985682012",
-    "price": "35,50",
+    "preco": "35,50",
     "precoMaior": "11.58"
   }
 ]
