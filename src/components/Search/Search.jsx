@@ -4,7 +4,7 @@ import { useEffect, useState, Fragment } from "react"
 import SearchIcon from '@material-ui/icons/Search';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Router from 'next/router';
-import { TextField, CircularProgress, InputAdornment, Grid, Typography } from "@material-ui/core";
+import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List, ListItem, ListItemAvatar, Divider } from "@material-ui/core";
 
 export const Details = (value) => {
   console.log(JSON.stringify(value, null, 2))
@@ -97,13 +97,16 @@ function Search() {
           />
         )}
         renderOption={(option) => (
-          <Grid container alignItems="center">
-            <Grid item xs>
-              <Typography variant="body2" color="textSecondary">
-                {option.nome}
-              </Typography>
-            </Grid>
-          </Grid>
+          <List className="w-full">
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar alt={option.nome} src="/img/no-photo.svg" className="p-1" />
+              </ListItemAvatar>
+              <ListItemText primary={option.nome} secondary={"R$" + option.preco} />
+            </ListItem>
+            <Divider />
+          </List>
+
         )
 
         }
