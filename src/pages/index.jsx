@@ -1,4 +1,4 @@
-import { Categories, Banner, Products, Layout, WedoApp, Promotions } from '../components';
+import { Categories, Banner, Products, Layout, WedoApp, Promotions, ProductList } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 
@@ -36,11 +36,37 @@ const Index = () => {
       <Categories categories={categories} />
       <Banner bannes={bannes} />
       <Delivery />
-      <Promotions promotions={promotions} />
-      <Products promotions={promotions} />
+      <Promotions products={promotions} title={promotionsTitle} />
+
+      {categoryList.map(category =>
+        <ProductList idCategory={category.id} banners={category.bannersList} />
+      )}
+      {/* <Products promotions={promotions} /> */}
       <WedoApp />
     </Layout>
   );
 }
 
 export default Index;
+
+const promotionsTitle = 'Dia dos Pais com as melhores ofertas e promoções';
+
+
+const categoryList = [
+  {
+    "id": 194,
+    "bannersList": [
+      { "foto": "banner4.png" },
+      { "foto": "banner5.png" }
+    ]
+  },
+  {
+    "id": 221,
+    "bannersList": [
+      { "foto": "banner6.png" },
+    ]
+  },
+  {
+    "id": 205
+  },
+]

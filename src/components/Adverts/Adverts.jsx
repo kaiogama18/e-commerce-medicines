@@ -2,7 +2,7 @@ import { Container, Grid } from "@material-ui/core"
 
 export default ({ banner, banner2 }) => {
     return (
-        <Container className="mt-10">
+        <div className="mt-10">
             <Grid container spacing={3}>
                 {
                     !banner2 ?
@@ -21,7 +21,7 @@ export default ({ banner, banner2 }) => {
                         </Container>
                 }
             </Grid>
-        </Container>
+        </div>
     )
 }
 

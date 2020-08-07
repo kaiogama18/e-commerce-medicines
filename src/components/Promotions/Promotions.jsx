@@ -1,21 +1,20 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Typography, Divider } from "@material-ui/core";
 import { Adverts, Product } from "..";
 
-const Title = 'MELHORES OFERTAS DO MÊS DE JUNHO';
-const Alert = 'PRORROGADO!';
 
-export default ({ promotions }) => {
+
+export default ({ products, title }) => {
     return (
         <Container>
-            <p className="text-default">
-                <a className="text-teal-600">{Alert}</a> {Title}
-            </p>
+            <div className="my-5">
+                <Typography variant="h6" className="uppercase"> {title} </Typography>
+                <Divider />
+            </div>
 
-            <Grid container spacing={3} lg={12} sm={'auto'}>
-                {promotions.map(promotions => <Grid item xs={3}><Product product={promotions} />  </Grid>)}
+            <Grid container spacing={3} >
+                {products.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} />  </Grid>)}
             </Grid>
 
-        
             <Adverts banner={"banner3.jpg"} />
         </Container>
     )

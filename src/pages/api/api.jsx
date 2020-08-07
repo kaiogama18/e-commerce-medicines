@@ -22,9 +22,8 @@ export default async (req, res) => {
         
         if (response.ok) {
             const data = await response.json()
-            // console.log("Api WEDO param DATA => " + JSON.stringify( data, null, 2));
             return res.status(200).json({ data });
-
+            // return res.status(200).json(await response.json());
         } else {
             error.response = response;
             throw error;
