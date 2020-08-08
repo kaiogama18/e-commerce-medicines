@@ -1,11 +1,13 @@
-$grey: #3e3e3e;
-$text_color_default: $grey;
-$color-default: #1e2832;
+$color-default: #2a4365;
 
-.categories{
-    color:  white !important;
-    background-color: $color-default !important;
-    .text{
-        color:  white !important;
+.breadcrumbs{
+    background-color: $color-default ;
+    margin-bottom: 1.25rem;
+    
+    .breadcrumb{
+        background-color: $color-default;
     }
 }
+
+
+

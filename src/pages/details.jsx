@@ -3,7 +3,16 @@ import { Container, CardMedia, Grid, Typography, Divider, Button, Icon, TextFiel
 import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts/RelatedProducts ";
 
+
+// const handleProduct = async (product) => {
+//   this.setState({
+//     product: product,
+//   });
+// };
+
+
 export default ({ id }) => {
+
 
   const [currency, setCurrency] = useState(1);
 
@@ -11,8 +20,97 @@ export default ({ id }) => {
     setCurrency(event.target.value);
   };
 
+
+
   return (
+
     <Layout>
+      <Breadcrumb />
+      <Container>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <CardMedia
+              component="img"
+              alt="{product.nome}"
+              image="/img/no-photo.svg"
+              title="{product.nome}"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h5" className="text-blue-900" style={{ fontWeight: 500 }}> Máscara De Proteção Respiratória </Typography>
+            <Divider />
+            <div className="text-gray-600 mt-2">
+              <Typography variant="subtitle2"> Modelo: Pano  </Typography>
+              <Typography variant="subtitle2"> Disponibilidade: Disponível em 2 dias úteis </Typography>
+            </div>
+
+            <div className="mt-8">
+              <Typography className="text-gray-600" variant="subtitle2"> De R$78.00 Por: </Typography>
+              <Typography variant="h3" style={{ fontWeight: 500 }}> R$59.95 </Typography>
+              <Typography className="text-gray-600" variant="subtitle2"> ECONOMIZE  R$ 18,05 </Typography>
+              <Typography className="text-gray-600" variant="subtitle2"> R$ 56,95 à vista com desconto Transferência Online </Typography>
+
+
+            </div>
+            <div className="mt-8">
+              <Grid container spacing={3}>
+                <Grid item xs={12} sm={3}>
+                  <TextField
+                    id="standard-select-currency"
+                    select
+                    value={currency}
+                    onChange={handleChange}
+                    helperText="Informe a Quantidade"
+                  >
+                    {currencies.map((option) => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.value}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+                <Grid item xs={12} sm={9}>
+                  <Button variant="contained" size="large" color="primary"
+                    size="large"
+                    fullWidth={true}
+                    disableElevation={true}
+                    style={{ backgroundColor: "#38b2ac" }}
+                    startIcon={<Icon>shopping_basket</Icon>}>
+                    Comprar </Button>
+                </Grid>
+
+
+              </Grid>
+
+            </div>
+
+          </Grid>
+        </Grid>
+
+      </Container>
+
+      <RelatedProducts />
+    </Layout>
+  )
+}
+
+const currencies = [
+  {
+    value: '1',
+  },
+  {
+    value: '2',
+  },
+  {
+    value: '3',
+  },
+  {
+    value: '4',
+  },
+];
+
+
+{/* <Layout>
       <Breadcrumb />
       <Container>
         <Grid container spacing={3}>
@@ -114,21 +212,4 @@ export default ({ id }) => {
         </div>
       </Container>
       <RelatedProducts />
-    </Layout>
-  )
-}
-
-const currencies = [
-  {
-    value: '1',
-  },
-  {
-    value: '2',
-  },
-  {
-    value: '3',
-  },
-  {
-    value: '4',
-  },
-];
+    </Layout> */}
