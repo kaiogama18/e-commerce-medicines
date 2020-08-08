@@ -22,6 +22,12 @@
 .button {
   background-color: #38b2ac !important ;
   color: white !important;
+
+  &:hover{
+  transition: all 300ms ease-out;
+  background-color: #2196f3 !important ;
+  }
+
 }
 
 .card {

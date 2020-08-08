@@ -1,4 +1,4 @@
-import { Categories, Banner, Products, Layout, WedoApp, Promotions, ProductList } from '../components';
+import { Categories, Banner, Layout, WedoApp, Promotions, ProductList } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 
@@ -50,8 +50,6 @@ const Index = () => {
 export default Index;
 
 const promotionsTitle = 'Dia dos Pais com as melhores ofertas e promoções';
-
-
 const categoryList = [
   {
     "id": 194,

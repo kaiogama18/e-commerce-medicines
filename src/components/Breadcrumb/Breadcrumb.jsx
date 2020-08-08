@@ -8,17 +8,17 @@ export default function (props) {
             <Container>
                 <Breadcrumbs aria-label="breadcrumb" className={styles.breadcrumb}>
                     <Link color="inherit" className="text-white lowercase" href="/" >
-                        PÁGINA INICIAL
+                        Página Inicial
                 </Link>
                     <Link
                         className="text-white lowercase"
                         href="/getting-started/installation/" >
-                        VESTUÁRIO
+                        Vestuário
                 </Link>
                     <Link
                         className="text-white font-bold lowercase"
                         aria-current="page">
-                        MÁSCARAS DE TECIDO
+                        Máscaras de tecido
                 </Link>
                 </Breadcrumbs>
             </Container>

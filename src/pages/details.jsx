@@ -4,23 +4,13 @@ import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts/RelatedProducts ";
 
 
-// const handleProduct = async (product) => {
-//   this.setState({
-//     product: product,
-//   });
-// };
-
 
 export default ({ id }) => {
 
-
   const [currency, setCurrency] = useState(1);
-
   const handleChange = (event) => {
     setCurrency(event.target.value);
   };
-
-
 
   return (
 

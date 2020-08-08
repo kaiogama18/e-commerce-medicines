@@ -3,6 +3,9 @@ import { Adverts, Product } from "..";
 import { useEffect, useState, Fragment } from "react"
 import Rota from "../../Routes/Rota";
 
+const Title = 'para você';
+const Alert = 'Cuidados diários';
+
 export default ({ idCategory, banners }) => {
     const route = '/produto/oferta';
     const [productList, setProductList] = useState([]);

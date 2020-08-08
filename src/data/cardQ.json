@@ -22,5 +22,31 @@
     "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/33/1033913_lavitan-mais-hair-60-capsulas_m1_637117983985682012",
     "preco": "35,50",
     "precoMaior": "11.58"
+  },
+  {
+    "id": "90549",
+    "nome": "GLUTAMINE NATURAL 300G POTE (INM)",
+    "descricao": "1X60CAPS",
+    "ean": "7896311708451",
+    "registroMS": "",
+    "quantidade": 0.0,
+    "categoria": {
+      "id": 206,
+      "nome": "ACESSORIO FITNESS"
+    },
+    "familia": {
+      "nome": "SUPLEMENTO",
+      "id": 59
+    },
+    "fabricante": {
+      "nome": "INTEGRAL MEDICA",
+      "id": 134
+    },
+    "principioAtivo": null,
+    "foto": "http://perfiltecnologia.ddns.net:3000/imagem/semfoto.gif",
+    "preco": 89.69,
+    "precoMaior": 80.73,
+    "itemConvenio": false,
+    "emPromocao": false
   }
 ]
