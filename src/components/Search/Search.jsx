@@ -8,7 +8,7 @@ import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List
 
 export const Details = (value) => {
   console.log(JSON.stringify(value, null, 2))
-  Router.push('/details?id=' + value.id);
+  Router.push('/details?name=' + value.nome);
 };
 
 

@@ -11,9 +11,11 @@ const backUrl = '/some/other/value'
 
 export default ({ product }) => {
     const [value, setValue] = useState(Math.trunc(Math.cbrt(product.preco)) + 1);
+    const backUrl = '/details'
+
     return (
         <Card variant="outlined" className="hover:shadow-lg ">
-            <Link href={{ pathname: 'details', query: { id: product.id } }}>
+            <Link href={{ pathname: 'details', query: { name: product.nome } }}>
                 <a>
                     <CardActionArea>
                         <CardMedia
@@ -26,7 +28,7 @@ export default ({ product }) => {
                     </CardActionArea>
                     <CardContent className={styles.cardContent}>
                         <div className={styles.cardTitle}>
-                            <Typography gutterBottom variant="subtitle2" > {product.nome} </Typography>  
+                            <Typography gutterBottom variant="subtitle2" > {product.nome} </Typography>
                             <Rating size="small" value={value} readOnly />
                         </div>
                         <Typography className={styles.oldPrice} variant="subtitle2">De R$ {product.precoMaior} por</Typography>
