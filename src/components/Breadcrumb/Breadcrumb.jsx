@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Breadcrumbs, Link } from '@material-ui/core';
 import styles from "./Breadcrumb.module.scss"
 
-export default function (props) {
+export default function ({ category, family, nameProduct }) {
     return (
         <section className={styles.breadcrumbs}>
             <Container>
@@ -13,12 +13,18 @@ export default function (props) {
                     <Link
                         className="text-white lowercase"
                         href="/getting-started/installation/" >
-                        Vestuário
-                </Link>
+                        {category.nome}
+                    </Link>
+
+                    <Link
+                        className="text-white lowercase"
+                        href="/getting-started/installation/" >
+                        {family.nome}
+                    </Link>
                     <Link
                         className="text-white font-bold lowercase"
                         aria-current="page">
-                        Máscaras de tecido
+                        {nameProduct}
                 </Link>
                 </Breadcrumbs>
             </Container>
