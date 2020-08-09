@@ -3,6 +3,7 @@ import { Container, CardMedia, Grid, Typography, Divider, Button, Icon, TextFiel
 import { useState, useEffect } from "react";
 import RelatedProducts from "../components/RelatedProducts/RelatedProducts ";
 import Rota from "../Routes/Rota";
+import { Rating } from "@material-ui/lab";
 
 
 
@@ -12,6 +13,8 @@ export default ({ id }) => {
   const refresh = 1
   const [currency, setCurrency] = useState(1);
   const [productt, setProduct] = useState([]);
+  const [value, setValue] = useState(0);
+
 
   const handleChange = (event) => {
     setCurrency(event.target.value);
@@ -23,6 +26,7 @@ export default ({ id }) => {
       const { data } = await Rota({ route, param: { "texto": nameProduct, "tipo": "des", "convenio": false } })
       setProduct(data)
       setCurrency(data.map(i => i.quantidade))
+      setValue(Math.trunc(Math.cbrt(data.map(i => i.preco))) + 1)
     })();
 
   }, [refresh])
@@ -71,6 +75,7 @@ export default ({ id }) => {
           <Grid item xs={12} sm={6} >
             <Title title={product.nome} />
             <ProductSubtitle title={['Modelo: ' + product.familia.nome, 'Código de Barras: ' + product.ean]} />
+            <Rating className="mt-1" size="small" value={value} readOnly />
             <ProductPrize preco={product.preco} precoMaior={product.precoMaior} />
             <ProductBuy quantidade={product.quantidade} />
           </Grid>
