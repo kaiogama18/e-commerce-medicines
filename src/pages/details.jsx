@@ -82,7 +82,7 @@ export default ({ id }) => {
       {product.principioAtivo ?
         <Content title={activePrinciple} description={[product.principioAtivo]} />
         : null}
-      <RelatedProducts />
+      <RelatedProducts idCategory={product.categoria.id} />
     </Layout>
   )
 }
