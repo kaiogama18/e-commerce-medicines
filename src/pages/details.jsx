@@ -57,7 +57,7 @@ export default ({ id }) => {
 
   return productt.map(product =>
     <Layout>
-      <Breadcrumb category={product.categoria} family={product.familia} nameProduct={product.nome} />
+      <Breadcrumb nameProduct={product.nome} links={[product.categoria, product.familia]} />
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
