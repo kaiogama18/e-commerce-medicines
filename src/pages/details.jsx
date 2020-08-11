@@ -23,10 +23,10 @@ export default ({ id }) => {
   useEffect(() => {
     (async () => {
       const nameProduct = new URLSearchParams(location.search).get('name');
-      console.log("Nomes:  " + nameProduct);
+      // console.log("Nomes:  " + nameProduct);
       const { data } = await Rota({ route, param: { "texto": nameProduct, "tipo": "des", "convenio": false } })
       setProduct(data)
-      console.log(JSON.stringify(data, null, 2))
+      // console.log(JSON.stringify(data, null, 2))
       setCurrency(data.map(i => i.quantidade))
       setValue(Math.trunc(Math.cbrt(data.map(i => i.preco))) + 1)
     })();
