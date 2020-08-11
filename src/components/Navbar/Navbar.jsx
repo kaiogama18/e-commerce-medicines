@@ -1,7 +1,7 @@
 import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
-import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, } from '@material-ui/core';
+import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, Tooltip, } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import styles from "./Navbar.module.scss"
 import NavLogin from '../NavLogin/NavLogin';
@@ -31,12 +31,15 @@ export default () => {
                   <Search />
                 </Grid>
                 <Grid item xs>
+                <Tooltip title="Ver Carrinho" aria-label="add">
                   <Paper variant="outlined" className={styles.carItem}>
                     <Badge className="mr-5" badgeContent={1} color="primary">
                       <ShoppingBasketIcon />
                     </Badge>
                     <Typography variant="h6"> R$ 1,00 </Typography>
                   </Paper>
+                </Tooltip>
+
                 </Grid>
               </Grid>
             </Container>

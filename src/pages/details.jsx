@@ -23,8 +23,10 @@ export default ({ id }) => {
   useEffect(() => {
     (async () => {
       const nameProduct = new URLSearchParams(location.search).get('name');
+      console.log("Nomes:  " + nameProduct);
       const { data } = await Rota({ route, param: { "texto": nameProduct, "tipo": "des", "convenio": false } })
       setProduct(data)
+      console.log(JSON.stringify(data, null, 2))
       setCurrency(data.map(i => i.quantidade))
       setValue(Math.trunc(Math.cbrt(data.map(i => i.preco))) + 1)
     })();
@@ -85,7 +87,7 @@ export default ({ id }) => {
       <Content title={titleDescription} description={[product.nome, product.descricao]} />
       <Content title={titleRecommendation} description={[recommendation, frete]} />
       {product.principioAtivo ?
-        <Content title={activePrinciple} description={[product.principioAtivo]} />
+        <Content title={activePrinciple} description={[product.principioAtivo.mensagem]} />
         : null}
       <RelatedProducts idCategory={product.categoria.id} />
     </Layout>

@@ -7,7 +7,7 @@ import Router from 'next/router';
 import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List, ListItem, ListItemAvatar, Divider } from "@material-ui/core";
 
 export const Details = (value) => {
-  console.log(JSON.stringify(value, null, 2))
+  // console.log(JSON.stringify(value, null, 2))
   Router.push('/details?name=' + value.nome);
 };
 
