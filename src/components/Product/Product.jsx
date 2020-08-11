@@ -37,14 +37,25 @@ export default ({ product }) => {
                 </a>
             </Link>
             <CardActions>
-                <Button className={styles.button} variant="contained" size="large"
-                    fullWidth={true}
-                    disableElevation={true}>
-                    {btn}
-                </Button>
+                {
+                    product.quantidade != 0 ? <Button className={styles.button} variant="contained" size="large"
+                        fullWidth={true}
+                        disableElevation={true}>
+                        {btn}
+                    </Button> : <Button variant="contained" size="large"
+                        fullWidth={true}
+                        disableElevation={true}
+                        disabled>
+                            {unavailable}
+                        </Button>
+
+                }
+
             </CardActions>
         </Card >
 
     )
 
 }
+
+const unavailable = 'Produto indisponível'

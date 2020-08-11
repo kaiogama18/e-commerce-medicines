@@ -11,23 +11,16 @@ export default ({ id }) => {
 
   const route = '/produto/consulta';
   const refresh = 1
-  const [currency, setCurrency] = useState(1);
   const [productt, setProduct] = useState([]);
   const [value, setValue] = useState(0);
-
-
-  const handleChange = (event) => {
-    setCurrency(event.target.value);
-  };
+  const [option, setOption] = useState(1);
 
   useEffect(() => {
     (async () => {
       const nameProduct = new URLSearchParams(location.search).get('name');
-      // console.log("Nomes:  " + nameProduct);
       const { data } = await Rota({ route, param: { "texto": nameProduct, "tipo": "des", "convenio": false } })
       setProduct(data)
-      // console.log(JSON.stringify(data, null, 2))
-      setCurrency(data.map(i => i.quantidade))
+      setOption(data.map(i => i.quantidade))
       setValue(Math.trunc(Math.cbrt(data.map(i => i.preco))) + 1)
     })();
 
@@ -35,17 +28,29 @@ export default ({ id }) => {
 
 
   function ProductBuy(props) {
-    return <div className="mt-8">
+    const Items = Array.from(Array(props.quantidade), (_, i) => i + 1)
+    const handleChange = (event) => {
+      setOption(event.target.value);
+    };
+
+    return props.quantidade != 0 ? <div className="mt-8">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={3}>
           <TextField
             select
-            value={currency}
+            value={option}
             onChange={handleChange}
-            helperText="Informe a Quantidade">
-            <MenuItem key={props.quantidade} value={props.quantidade}>
-              {props.quantidade}
-            </MenuItem>
+            className="w-full"
+            SelectProps={{
+              native: true,
+            }}
+            helperText="Informe a Quantidade"
+          >
+            {Items.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
           </TextField>
         </Grid>
         <Grid item xs={12} sm={9}>
@@ -59,6 +64,7 @@ export default ({ id }) => {
         </Grid>
       </Grid>
     </div>
+      : <><Typography className="text-gray-700 uppercase mt-8" variant="h6" style={{ fontWeight: 500 }} > {unavailable} </Typography></>
   }
 
   return productt.map(product =>
@@ -94,6 +100,7 @@ export default ({ id }) => {
   )
 }
 
+const unavailable = 'Produto indisponível na loja'
 const titleDescription = 'descrição'
 const activePrinciple = 'princípio Ativo'
 const titleRecommendation = 'Exige retenção de receita médica no momento da entrega'
@@ -136,5 +143,8 @@ function Description(props) {
 function SubtitlePD(props) {
   return <Typography variant="subtitle2" className="text-gray-600 capitalize"> {props.title}  </Typography>
 }
+
+
+
 
 

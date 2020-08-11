@@ -61,7 +61,8 @@
     "react-window": "^1.8.5",
     "sass": "^1.26.3",
     "stylelint-config-recommended": "^3.0.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "tiny-slider": "^2.9.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
