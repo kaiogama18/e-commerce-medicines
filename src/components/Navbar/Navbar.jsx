@@ -2,9 +2,10 @@ import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
 import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, Tooltip, } from '@material-ui/core';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+
 import styles from "./Navbar.module.scss"
 import NavLogin from '../NavLogin/NavLogin';
+import NavCar from '../NavCar/NavCar';
 
 export default () => {
 
@@ -16,8 +17,8 @@ export default () => {
           <Toolbar>
             <Container>
               <Grid container justify="space-between" alignItems="center" spacing={3}>
-                <Grid item xs>
-                  <Link href="/">
+                <Grid xs >
+                  <Link href="/" >
                     <CardMedia
                       className={styles.imgLogo}
                       component="img"
@@ -27,20 +28,10 @@ export default () => {
                     />
                   </Link>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={8} className="mr-4">
                   <Search />
                 </Grid>
-                <Grid item xs>
-                <Tooltip title="Ver Carrinho" aria-label="add">
-                  <Paper variant="outlined" className={styles.carItem}>
-                    <Badge className="mr-5" badgeContent={1} color="primary">
-                      <ShoppingBasketIcon />
-                    </Badge>
-                    <Typography variant="h6"> R$ 1,00 </Typography>
-                  </Paper>
-                </Tooltip>
-
-                </Grid>
+                <NavCar />
               </Grid>
             </Container>
           </Toolbar>
