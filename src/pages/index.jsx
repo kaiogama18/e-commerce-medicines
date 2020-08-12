@@ -1,6 +1,7 @@
-import { Categories, Banner, Layout, WedoApp, Promotions, ProductList } from '../components';
+import { Categories, Banner, Layout, WedoApp, ProductList, Product, Adverts } from '../components';
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
+import { Container, Typography, Grid, Divider } from '@material-ui/core';
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -21,6 +22,9 @@ const Index = () => {
   const [categories, setCategories] = useState([]);
   const [bannes, setBannes] = useState([]);
   const [promotions, setPromotions] = useState([]);
+  const [product, setProduct] = useState();
+
+
   useEffect(() => {
     const fetchAPI = async () => {
       const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
@@ -31,17 +35,31 @@ const Index = () => {
     fetchAPI();
   }, route)
 
+
+  async function addItemCart(product) {
+    console.log(product)
+  }
+
+
+
   return (
     <Layout>
       <Categories categories={categories} />
       <Banner bannes={bannes} />
       <Delivery />
-      <Promotions products={promotions} title={promotionsTitle} />
+
+      <Container>
+          <Title title={promotionsTitle} />
+        <Grid container spacing={3}>
+          {promotions.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} addItemCart={addItemCart} />  </Grid>)}
+        </Grid>
+        <Adverts banner={"banner3.jpg"} />
+      </Container>
 
       {categoryList.map(category =>
-        <ProductList idCategory={category.id} banners={category.bannersList} />
+        <ProductList idCategory={category.id} banners={category.bannersList} addItemCart={addItemCart} />
       )}
-      {/* <Products promotions={promotions} /> */}
+
       <WedoApp />
     </Layout>
   );
@@ -68,3 +86,8 @@ const categoryList = [
     "id": 205
   },
 ]
+
+
+function Title(props) {
+  return <div className="my-5"><Typography className="text-blue-900 uppercase" variant="h6" style={{ fontWeight: 500 }} > {props.title} </Typography> <Divider /></div>
+}

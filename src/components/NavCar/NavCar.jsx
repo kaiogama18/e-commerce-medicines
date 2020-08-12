@@ -1,7 +1,8 @@
 import styles from "./NavCar.module.scss"
-import { Badge, Typography, Button, Grid, Drawer, Divider } from "@material-ui/core"
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useState } from "react";
+import { Badge, Typography, Button, Grid, Drawer, Divider, ListItemAvatar, List, ListItem, Avatar, ListItemText, ListItemSecondaryAction, IconButton } from "@material-ui/core"
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 {/* <Grid item xs className="bg-red-600 p-0"> */ }
 
@@ -28,6 +29,20 @@ export default () => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <Title title={'Meu carrinho'} />
+
+            <List className="w-full mt-5">
+                <ListItem>
+                    <ListItemAvatar>
+                        <Avatar alt={'option.nome'} src="/img/no-photo.svg" className="p-1" />
+                    </ListItemAvatar>
+                    <ListItemText primary={'option.nome'} secondary={"R$" + 'option.preco'} />
+                    <ListItemSecondaryAction>
+                        <IconButton edge="end" aria-label="delete">
+                            <DeleteIcon />
+                        </IconButton>
+                    </ListItemSecondaryAction>
+                </ListItem>
+            </List>
 
 
         </div>
@@ -65,4 +80,4 @@ export default () => {
 
 function Title(props) {
     return <><Typography className="text-blue-900 uppercase" variant="h6" style={{ fontWeight: 500 }} > {props.title} </Typography> <Divider /></>
-  }
+}

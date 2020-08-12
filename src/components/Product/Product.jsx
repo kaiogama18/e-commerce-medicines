@@ -9,7 +9,7 @@ const btn = 'COMPRAR';
 const backUrl = '/some/other/value'
 
 
-export default ({ product }) => {
+export default ({ product, addItemCart }) => {
     const [value, setValue] = useState(Math.trunc(Math.cbrt(product.preco)) + 1);
     const backUrl = '/details'
 
@@ -38,7 +38,10 @@ export default ({ product }) => {
             </Link>
             <CardActions>
                 {
-                    product.quantidade != 0 ? <Button className={styles.button} variant="contained" size="large"
+                    product.quantidade != 0 ? <Button onClick={()=> addItemCart(product)}
+                        className={styles.button}
+                        variant="contained"
+                        size="large"
                         fullWidth={true}
                         disableElevation={true}>
                         {btn}

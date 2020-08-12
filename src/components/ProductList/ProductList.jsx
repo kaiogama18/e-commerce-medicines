@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Divider } from "@material-ui/core";
+import { Container, Grid, Typography, Divider, Button } from "@material-ui/core";
 import { Adverts, Product } from "..";
 import { useEffect, useState, Fragment } from "react"
 import Rota from "../../Routes/Rota";
@@ -6,7 +6,7 @@ import Rota from "../../Routes/Rota";
 const Title = 'para você';
 const Alert = 'Cuidados diários';
 
-export default ({ idCategory, banners }) => {
+export default ({ idCategory, banners, addItemCart }) => {
     const route = '/produto/oferta';
     const [productList, setProductList] = useState([]);
     const [categoryList, setCategoryList] = useState([]);
@@ -19,9 +19,10 @@ export default ({ idCategory, banners }) => {
         })();
 
     }, [idCategory])
-
     return (
         < Container >
+
+          
 
             <div className="my-5">
                 {categoryList.map(category => <Typography variant="h6" className="uppercase">{category.nome} </Typography>
@@ -30,7 +31,7 @@ export default ({ idCategory, banners }) => {
             </div>
 
             <Grid container spacing={3} >
-                {productList.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} />  </Grid>)}
+                {productList.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} addItemCart={addItemCart} />  </Grid>)}
             </Grid>
 
             {
