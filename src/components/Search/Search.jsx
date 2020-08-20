@@ -3,7 +3,9 @@ import styles from "./Search.module.scss"
 import { useEffect, useState, Fragment } from "react"
 import SearchIcon from '@material-ui/icons/Search';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import Router from 'next/router';
+import Router from "next/router";
+
+
 import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List, ListItem, ListItemAvatar, Divider } from "@material-ui/core";
 
 export const Details = (value) => {

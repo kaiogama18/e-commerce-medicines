@@ -2,6 +2,7 @@ import { Categories, Banner, Layout, WedoApp, ProductList, Product, Adverts } fr
 import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 import { Container, Typography, Grid, Divider } from '@material-ui/core';
+import Router from "next/router";
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -26,22 +27,28 @@ const Index = () => {
 
 
   useEffect(() => {
-    const fetchAPI = async () => {
-      const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
-      setCategories(data.listaDeCategorias)
-      setBannes(data.listaDeBanners)
-      setPromotions(data.listaDeProdutos)
-    }
-    fetchAPI();
+    (async () => {
+      try {
+        const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
+        if (data.ok) {
+          setCategories(data.listaDeCategorias)
+          setBannes(data.listaDeBanners)
+          setPromotions(data.listaDeProdutos)
+        } else {
+          Router.push('/notfound');
+        }
+      } catch (error) {
+        const { response } = error;
+        Router.push('/notfound');
+      }
+    })();
   }, route)
 
 
+
   async function addItemCart(product) {
-    console.log(product)
+    // console.log(product)
   }
-
-
-
   return (
     <Layout>
       <Categories categories={categories} />
@@ -49,7 +56,7 @@ const Index = () => {
       <Delivery />
 
       <Container>
-          <Title title={promotionsTitle} />
+        <Title title={promotionsTitle} />
         <Grid container spacing={3}>
           {promotions.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} addItemCart={addItemCart} />  </Grid>)}
         </Grid>

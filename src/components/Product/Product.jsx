@@ -38,7 +38,7 @@ export default ({ product, addItemCart }) => {
             </Link>
             <CardActions>
                 {
-                    product.quantidade != 0 ? <Button onClick={()=> addItemCart(product)}
+                    product.quantidade != 0 ? <Button onClick={() => addItemCart(product)}
                         className={styles.button}
                         variant="contained"
                         size="large"
