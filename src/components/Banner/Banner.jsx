@@ -5,8 +5,8 @@ import data from '../../data/banner.json';
 const options = {
   center: true,
   loop: true,
-  autoplay:true,
-  autoplayTimeout:3000,
+  autoplay: true,
+  autoplayTimeout: 3000,
   responsive: {
     0: {
       items: 1
@@ -20,11 +20,15 @@ const options = {
   }
 };
 
-export default () => {
+export default ({ bannes }) => {
   return (
 
+    // <OwlCarousel options={options} >
+    //   {data.map(banner => <img src={banner.url_banner} className={styles.banner} />)}
+    // </OwlCarousel>
+
     <OwlCarousel options={options} >
-      {data.map(banner => <img src={banner.url_banner} className={styles.banner} />)}
+      {bannes.map(banner => <img src={banner.foto} className={styles.banner} />)}
     </OwlCarousel>
   )
 }

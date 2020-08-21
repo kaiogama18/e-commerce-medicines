@@ -21,8 +21,8 @@ export default ({ product, addItemCart }) => {
                         <CardMedia
                             component="img"
                             alt={product.nome}
-                            image="/img/no-photo.svg"
-                            // image={product.foto}
+                            // image="/img/no-photo.svg"
+                            image={product.foto}
                             title={product.nome}
                         />
                     </CardActionArea>

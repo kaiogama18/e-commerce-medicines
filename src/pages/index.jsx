@@ -4,6 +4,9 @@ import Rota from '../Routes/Rota';
 import { Container, Typography, Grid, Divider } from '@material-ui/core';
 import Router from "next/router";
 
+import data from '../data/index.json';
+
+
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
   const delivery_subtitle =
@@ -26,24 +29,32 @@ const Index = () => {
   const [product, setProduct] = useState();
 
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
-        if (data.ok) {
-          setCategories(data.listaDeCategorias)
-          setBannes(data.listaDeBanners)
-          setPromotions(data.listaDeProdutos)
-        } else {
-          Router.push('/notfound');
-        }
-      } catch (error) {
-        const { response } = error;
-        Router.push('/notfound');
-      }
-    })();
-  }, route)
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const { data } = await Rota({ route, param: { id: "", idCategoria: "", numeroCartao: "" } })
+  //       if (data.ok) {
+  //         setCategories(data.listaDeCategorias)
+  //         setBannes(data.listaDeBanners)
+  //         setPromotions(data.listaDeProdutos)
+  //       } else {
+  //         Router.push('/notfound');
+  //       }
+  //     } catch (error) {
+  //       const { response } = error;
+  //       Router.push('/notfound');
+  //     }
+  //   })();
+  // }, route)
 
+  //Para Demostração 
+  useEffect(() => {
+    console.log('[Plot] ==> ' + JSON.stringify(data, null, 2));
+    console.log('[Plot] ==> ' + JSON.stringify(data.listaDeCategorias, null, 2));
+    setCategories(data.listaDeCategorias)
+    setBannes(data.listaDeBanners)
+    setPromotions(data.listaDeProdutos)
+  }, route)
 
 
   async function addItemCart(product) {
@@ -63,9 +74,9 @@ const Index = () => {
         <Adverts banner={"banner3.jpg"} />
       </Container>
 
-      {categoryList.map(category =>
+      {/* {categoryList.map(category =>
         <ProductList idCategory={category.id} banners={category.bannersList} addItemCart={addItemCart} />
-      )}
+      )} */}
 
       <WedoApp />
     </Layout>
