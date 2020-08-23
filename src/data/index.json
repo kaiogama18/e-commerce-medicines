@@ -166,6 +166,32 @@
                 "precoMaior": 11.58,
                 "itemConvenio": false,
                 "emPromocao": false
+            },
+            {
+                "id": "90545",
+                "nome": "Vitamina D3 Black Skull 100 Caps",
+                "descricao": "1X60CAPX",
+                "ean": "7896311708452",
+                "registroMS": "",
+                "quantidade": 5.0,
+                "categoria": {
+                    "id": 206,
+                    "nome": "ACESSORIO"
+                },
+                "familia": {
+                    "nome": "SUPLEMENTO",
+                    "id": 59
+                },
+                "fabricante": {
+                    "nome": "INTEGRAL MEDICA",
+                    "id": 134
+                },
+                "principioAtivo": null,
+                "foto": "https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/49/1049386_vitamina-d3-black-skull-100-caps_s1_637150399690153901",
+                "preco": 56.99,
+                "precoMaior": 61.58,
+                "itemConvenio": false,
+                "emPromocao": false
             }
         ]
     }

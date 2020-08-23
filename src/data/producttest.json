@@ -1,0 +1,28 @@
+[
+    {
+        "id": "90549",
+        "nome": "Torsilax 30 Comprimidos",
+        "descricao": "1X60CAPS",
+        "ean": "7896311708451",
+        "registroMS": "",
+        "quantidade": 5.0,
+        "categoria": {
+            "id": 194,
+            "nome": "Dermocosméticos"
+        },
+        "familia": {
+            "nome": "SUPLEMENTO",
+            "id": 59
+        },
+        "fabricante": {
+            "nome": "Medicamentos",
+            "id": 134
+        },
+        "principioAtivo": null,
+        "foto": "https://naturalquality.com.br/wp-content/uploads/2015/11/glutamine-sts.png",
+        "preco": 23.39,
+        "precoMaior": 30.73,
+        "itemConvenio": false,
+        "emPromocao": true
+    }
+]

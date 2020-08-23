@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import Rota from '../Routes/Rota';
 import { Container, Typography, Grid, Divider } from '@material-ui/core';
 import Router from "next/router";
-
 import data from '../data/index.json';
-
 
 function Delivery() {
   const delivery_title = 'Entrega somente para Manaus';
@@ -49,8 +47,8 @@ const Index = () => {
 
   //Para Demostração 
   useEffect(() => {
-    console.log('[Plot] ==> ' + JSON.stringify(data, null, 2));
-    console.log('[Plot] ==> ' + JSON.stringify(data.listaDeCategorias, null, 2));
+    // console.log('[Plot] ==> ' + JSON.stringify(data, null, 2));
+    // console.log('[Plot] ==> ' + JSON.stringify(data.listaDeCategorias, null, 2));
     setCategories(data.listaDeCategorias)
     setBannes(data.listaDeBanners)
     setPromotions(data.listaDeProdutos)
@@ -68,9 +66,9 @@ const Index = () => {
 
       <Container>
         <Title title={promotionsTitle} />
-        <Grid container spacing={3}>
-          {promotions.map(product => <Grid item xs={6} md={9} lg={3}><Product product={product} addItemCart={addItemCart} />  </Grid>)}
-        </Grid>
+        <div class="flex -mx-2">
+          {promotions.map(product => <div class="w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+        </div>
         <Adverts banner={"banner3.jpg"} />
       </Container>
 
@@ -85,7 +83,7 @@ const Index = () => {
 
 export default Index;
 
-const promotionsTitle = 'Dia dos Pais com as melhores ofertas e promoções';
+const promotionsTitle = 'Melhores ofertas e promoções';
 const categoryList = [
   {
     "id": 194,
@@ -104,7 +102,6 @@ const categoryList = [
     "id": 205
   },
 ]
-
 
 function Title(props) {
   return <div className="my-5"><Typography className="text-blue-900 uppercase" variant="h6" style={{ fontWeight: 500 }} > {props.title} </Typography> <Divider /></div>

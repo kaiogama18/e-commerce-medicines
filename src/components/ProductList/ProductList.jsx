@@ -1,17 +1,14 @@
-import { Container, Grid, Typography, Divider} from "@material-ui/core";
+import { Container, Grid, Typography, Divider } from "@material-ui/core";
 import { Adverts, Product } from "..";
 import { useEffect, useState } from "react"
 import Rota from "../../Routes/Rota";
 import { Router } from "next/router";
 
-const Title = 'para você';
-const Alert = 'Cuidados diários';
-
 export default ({ idCategory, banners, addItemCart }) => {
     const route = '/produto/oferta';
     const [productList, setProductList] = useState([]);
     const [categoryList, setCategoryList] = useState([]);
-   
+
     useEffect(() => {
         (async () => {
             try {
@@ -28,8 +25,7 @@ export default ({ idCategory, banners, addItemCart }) => {
             }
         })();
 
-    }, [idCategory])
-
+    }, [route])
 
     return (
         < Container >

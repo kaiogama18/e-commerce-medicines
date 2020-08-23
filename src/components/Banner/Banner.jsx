@@ -21,6 +21,7 @@ const options = {
 };
 
 export default ({ bannes }) => {
+  // console.log('[Plot] ==> ' + JSON.stringify(bannes, null, 2));
   return (
 
     // <OwlCarousel options={options} >
