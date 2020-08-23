@@ -12,7 +12,7 @@ This project exists thanks to all the people who contribute.
 
 <p align="center">
   <a href="https://wedo-market.herokuapp.com/">
-    <img alt="logo Wedo" style="fill: blue;" src="https://wedo-market.herokuapp.com/img/logo-Wedo-mini.png" width="70%" />
+    <img alt="logo Wedo" style="fill: blue;" src="https://wedo-market.herokuapp.com/img/logo-Wedo-mini.png" width="50%" />
   </a>
 </p>
 <p align="center">
