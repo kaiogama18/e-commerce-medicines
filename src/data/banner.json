@@ -1,17 +1,17 @@
 [
   {
     "id": 3702,
-    "name": "banner generico",
-    "url_banner": "/img/banner/banner1.png"
+    "nome": "banner generico",
+    "foto": "/img/banner/banner1.png"
   },
   {
     "id": 3714,
-    "name": "banner generico",
-    "url_banner": "/img/banner/banner3.png"
+    "nome": "banner generico",
+    "foto": "/img/banner/banner3.png"
   },
   {
     "id": 3707,
-    "name": "banner generico",
-    "url_banner": "/img/banner/banner2.png"
+    "nome": "banner generico",
+    "foto": "/img/banner/banner2.png"
   }
 ]

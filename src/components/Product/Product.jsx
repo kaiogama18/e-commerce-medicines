@@ -16,16 +16,14 @@ export default ({ product, addItemCart }) => {
     return (
         <Card variant="outlined" className="hover:shadow-lg ">
             <Link href={{ pathname: 'details', query: { name: product.nome } }}>
-                <a>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            alt={product.nome}
-                            // image="/img/no-photo.svg"
-                            image={product.foto}
-                            title={product.nome}
-                        />
-                    </CardActionArea>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        alt={product.nome}
+                        // image="/img/no-photo.svg"
+                        image={product.foto}
+                        title={product.nome}
+                    />
                     <CardContent className={styles.cardContent}>
                         <div className={styles.cardTitle}>
                             <Typography gutterBottom variant="subtitle2" > {product.nome} </Typography>
@@ -34,7 +32,7 @@ export default ({ product, addItemCart }) => {
                         <Typography className={styles.oldPrice} variant="subtitle2">De R$ {product.precoMaior} por</Typography>
                         <Typography className={styles.price} variant="h5" component="h2">R$ {product.preco}</Typography>
                     </CardContent>
-                </a>
+                </CardActionArea>
             </Link>
             <CardActions>
                 {

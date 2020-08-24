@@ -7,6 +7,26 @@ import styles from "./Navbar.module.scss"
 import NavLogin from '../NavLogin/NavLogin';
 import NavCar from '../NavCar/NavCar';
 
+
+// export default function () {
+  
+//   useEffect(function mount() {
+
+//     function onScroll() {
+//       console.log("scroll!");
+//     }
+
+//     window.addEventListener("scroll", onScroll);
+
+//     return function unMount() {
+//       window.removeEventListener("scroll", onScroll);
+//     };
+//   });
+
+//   return null;
+// }
+
+
 export default () => {
 
   return (
