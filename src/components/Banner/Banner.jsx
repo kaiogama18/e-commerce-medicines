@@ -1,8 +1,8 @@
 // import OwlCarousel from "react-owl-carousel2";
+import { Card, CardMedia, CardActionArea } from "@material-ui/core";
 import styles from "./Banner.module.scss"
 import data from '../../data/banner.json';
 import Slider from "react-slick";
-import { Card, CardMedia, CardActionArea } from "@material-ui/core";
 
 
 

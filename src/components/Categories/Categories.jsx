@@ -1,78 +1,71 @@
 import { Breakpoint } from 'react-socks';
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
-import data from '../../data/category.json';
-import { Container, AppBar, Tabs, Tab } from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 import stylesCat from "./Categories.module.scss"
+import Slider from "react-slick";
+import data from '../../data/category.json';
 
-function CarouselCategory(props) {
-  return (
-    <CarouselProvider
-      naturalSlideWidth={100}
-      naturalSlideHeight={120}
-      totalSlides={6}
-      visibleSlides={4}
-    >
-      <Slider>
-        <div className="carousel-category">
-          {props.category.map((aux, index) => {
-            return (
-              <Slide key={index}>
-                <button>
-                  <div className="btn-c">
-                    <img src={aux.src} alt={aux.name} />
-                    <p>{aux.name}</p>
-                  </div>
-                </button>
-              </Slide>
-            );
-          })}
-        </div>
-      </Slider>
-    </CarouselProvider>
-  );
-}
-
+const settings = {
+  className: "slider variable-width",
+  dots: false,
+  infinite: true,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true
+};
 
 const Categories = ({ categories }) => {
-
-  const options = {
-    center: true,
-    items: 2,
-    loop: true,
-    margin: 10,
-    responsive: {
-      600: {
-        items: 8
-      }
-    }
-  };
-
   return (
-    <div >
-      <Breakpoint medium up>
-        <AppBar position="static" color="default" className={stylesCat.categories}>
-          <Container>
-            <Tabs
-              // value={value}
-              // onChange={handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="scrollable"
-              scrollButtons="auto"
-              aria-label="scrollable auto tabs example"
-            >
-              {categories.map(category => (
-                <Tab label={category.nome} className={stylesCat.text} />
-              ))}
-            </Tabs>
-          </Container>
-        </AppBar>
+    <>
+      <Breakpoint className={stylesCat.categories} medium up>
+        <Container className="py-4 px-8">
+          <Slider {...settings}>
+            {categories.map(category => (
+              <div className="flex text-center mx-8">
+                <Typography variant="subtitle1" >
+                  {category.nome}
+                </Typography>
+              </div>
+            ))}
+          </Slider>
+        </Container>
       </Breakpoint>
-
-      <Breakpoint small down>
+      {/* <Breakpoint small down>
         <CarouselCategory category={data} />
-      </Breakpoint>
-    </div>
+      </Breakpoint> */}
+    </>
   );
 };
 export default Categories;
+
+// // Old para remover
+// import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+
+// function CarouselCategory(props) {
+//   return (
+//     <CarouselProvider
+//       naturalSlideWidth={100}
+//       naturalSlideHeight={120}
+//       totalSlides={6}
+//       visibleSlides={4}
+//     >
+//       <Slider>
+//         <div className="carousel-category">
+//           {props.category.map((aux, index) => {
+//             return (
+//               <Slide key={index}>
+//                 <button>
+//                   <div className="btn-c">
+//                     <img src={aux.src} alt={aux.name} />
+//                     <p>{aux.name}</p>
+//                   </div>
+//                 </button>
+//               </Slide>
+//             );
+//           })}
+//         </div>
+//       </Slider>
+//     </CarouselProvider>
+//   );
+// }
+
