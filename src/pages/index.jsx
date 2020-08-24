@@ -72,6 +72,23 @@ const Index = () => {
         <Adverts banner={"banner3.jpg"} />
       </Container>
 
+      <Container>
+      <Title title="Ofertas especiais" />
+        <div class="flex -mx-2">
+          {promotions.map(product => <div class="w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+        </div>
+        <Adverts banner={"banner4.png"} banner2={"banner5.png"} />
+      </Container>
+
+      <Container>
+        <div className="mt-10">
+        <Title title="Genéricos" />
+        </div>
+        <div class="flex -mx-2">
+          {promotions.map(product => <div class="w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+        </div>
+      </Container>
+
       {/* {categoryList.map(category =>
         <ProductList idCategory={category.id} banners={category.bannersList} addItemCart={addItemCart} />
       )} */}
