@@ -22,9 +22,6 @@ export default ({ product, addItemCart }) => {
                     />
                     <CardContent className={styles.cardContent}>
 
-
-
-
                         <div className={styles.cardTitle}>
                             <Typography gutterBottom variant="subtitle1" > {product.nome} </Typography>
                         </div>
@@ -37,6 +34,8 @@ export default ({ product, addItemCart }) => {
                                 <Typography className={styles.price} variant="h6">R$ {product.preco}</Typography>
                             </Grid>
                         </Grid>
+                        <Typography variant="subtitle2">ou 2x de {(product.preco)/2} sem juros</Typography>
+
 
                         <Grid container wrap="nowrap" alignItems="center" justify="center">
                             <Grid item xs>
