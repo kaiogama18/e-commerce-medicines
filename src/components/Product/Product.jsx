@@ -1,14 +1,10 @@
 import Link from 'next/link';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, CardContent, Typography, Button, CardActions, Grid } from '@material-ui/core';
 import styles from "./Product.module.scss"
 import { useState } from 'react';
-import { Skeleton, Rating } from '@material-ui/lab';
-
+import { Rating } from '@material-ui/lab';
 const btn = 'COMPRAR';
-
 const backUrl = '/some/other/value'
-
-
 export default ({ product, addItemCart }) => {
     const [value, setValue] = useState(Math.trunc(Math.cbrt(product.preco)) + 1);
     const backUrl = '/details'
@@ -25,12 +21,37 @@ export default ({ product, addItemCart }) => {
                         title={product.nome}
                     />
                     <CardContent className={styles.cardContent}>
+
+
+
+
                         <div className={styles.cardTitle}>
-                            <Typography gutterBottom variant="subtitle2" > {product.nome} </Typography>
-                            <Rating size="small" value={value} readOnly />
+                            <Typography gutterBottom variant="subtitle1" > {product.nome} </Typography>
                         </div>
-                        <Typography className={styles.oldPrice} variant="subtitle2">De R$ {product.precoMaior} por</Typography>
-                        <Typography className={styles.price} variant="h5" component="h2">R$ {product.preco}</Typography>
+
+                        <Grid container wrap="nowrap" spacing={1} alignItems="center" justify="center">
+                            <Grid item xs>
+                                <Typography noWrap className={styles.oldPrice} variant="subtitle2">De R$ {product.precoMaior} por </Typography>
+                            </Grid>
+                            <Grid item xs>
+                                <Typography className={styles.price} variant="h6">R$ {product.preco}</Typography>
+                            </Grid>
+                        </Grid>
+
+                        <Grid container wrap="nowrap" alignItems="center" justify="center">
+                            <Grid item xs>
+                                <Rating size="small" value={value} readOnly />
+                            </Grid>
+                            <Grid item xs>
+                                <Typography noWrap className="text-gray-600" variant="subtitle2" component="h2">({product.quantidade})</Typography>
+                            </Grid>
+                        </Grid>
+
+
+
+
+
+
                     </CardContent>
                 </CardActionArea>
             </Link>
@@ -49,9 +70,7 @@ export default ({ product, addItemCart }) => {
                         disabled>
                             {unavailable}
                         </Button>
-
                 }
-
             </CardActions>
         </Card >
 

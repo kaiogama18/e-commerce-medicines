@@ -4,11 +4,6 @@ import { Badge, Typography, Button, Grid, Drawer, Divider, ListItemAvatar, List,
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-{/* <Grid item xs className="bg-red-600 p-0"> */ }
-
-
-
-
 export default () => {
     const [state, setState] = useState({
         right: false

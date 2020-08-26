@@ -1,25 +1,18 @@
-$color-tilte: #2a4365;
+@import '../../styles/style.scss';
 
 .footer {
     margin-top: 2.5rem;
-    background-color: #fbfbfb;
-    a {
-        color: #2a4365 !important;
+    background-color: $neutralLight;
+
+    .footerTilte {
+        color: $primaryDark;
+        margin: 1.5rem 0 1rem 0;
+    }
+    .describre {
         padding: 1% 0;
     }
-}
+    .social {
+        width: 2.5rem;
+    }
 
-.footerTilte {
-    color : #2a4365 !important;
-    margin-top: 1.5rem !important;
-}
-
-
-.describre {
-    padding: 1% 0;
-}
-
-.social {
-    width: 2.5rem;
-    color: #2a4365;
 }

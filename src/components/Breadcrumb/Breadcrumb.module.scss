@@ -1,12 +1,8 @@
-$color-default: #2a4365;
+@import '../../styles/style.scss';
 
 .breadcrumbs{
-    background-color: $color-default ;
+    background-color: $primary;
     margin-bottom: 1.25rem;
-    
-    .breadcrumb{
-        background-color: $color-default;
-    }
 }
 
 

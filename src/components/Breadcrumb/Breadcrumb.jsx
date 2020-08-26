@@ -6,7 +6,7 @@ export default function (props) {
     return (
         <section className={styles.breadcrumbs}>
             <Container>
-                <Breadcrumbs aria-label="breadcrumb" className={styles.breadcrumb}>
+                <Breadcrumbs aria-label="breadcrumb">
                     <Link color="inherit" className="text-white lowercase" href="/" >
                         Página Inicial
                 </Link>

@@ -1,6 +1,8 @@
-    .search{
-        background-color: #edf2f7;
-        .searchIcon{
-            color: #38b2ac;
-        }
+@import '../../styles/style.scss';
+
+.search{
+    background-color: $neutralLighter;
+    .searchIcon{
+        color: $secondary;
     }
+}

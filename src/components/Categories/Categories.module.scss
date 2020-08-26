@@ -1,13 +1,9 @@
-$grey: #3e3e3e;
-$text_color_default: $grey;
-// $color-default: #1e2832;
-$color-default: #2a4365;
+@import '../../styles/style.scss';
 
-// #23234a 
 .categories{
-    color:  white !important;
-    background-color: $color-default !important;
+    color:  $neutralLighter;
+    background-color: $primary;
     .text{
-        color:  white !important;
+        color:  $neutralLighter;
     }
 }

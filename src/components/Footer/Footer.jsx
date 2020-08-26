@@ -1,10 +1,10 @@
 import styles from "./Footer.module.scss"
-import { Grid, Container, Typography, Avatar, Divider } from "@material-ui/core";
+import { Grid, Container, Typography, Divider } from "@material-ui/core";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Divider/>
+      <Divider />
       <Container>
         <Grid container justify="center" xs="auto" spacing={3}>
 

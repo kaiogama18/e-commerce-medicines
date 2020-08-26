@@ -1,6 +1,6 @@
 import { Breakpoint } from 'react-socks';
 import { Container, Typography } from '@material-ui/core';
-import stylesCat from "./Categories.module.scss"
+import styles from "./Categories.module.scss"
 import Slider from "react-slick";
 import data from '../../data/category.json';
 
@@ -17,7 +17,7 @@ const settings = {
 const Categories = ({ categories }) => {
   return (
     <>
-      <Breakpoint className={stylesCat.categories} medium up>
+      <Breakpoint className={styles.categories} medium up>
         <Container className="py-4 px-8">
           <Slider {...settings}>
             {categories.map(category => (

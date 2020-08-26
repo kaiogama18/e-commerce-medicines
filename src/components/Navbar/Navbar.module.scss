@@ -1,15 +1,15 @@
-$color-btn: #38b2ac;
-$color-default: #1e2832;
+@import '../../styles/style.scss';
+
 .imgLogo {
     cursor: pointer;
     margin-right: 2.5rem;
-    width: 12rem !important;
+    width: 12rem;
 }
 
 .divider{
-    margin: 0 0.5rem !important;
+    margin: 0 0.5rem;
 }
 
 .navbar{
-    background-color: white !important;
+    background-color: $neutralLightest;
 }
