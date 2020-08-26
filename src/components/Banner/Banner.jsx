@@ -69,15 +69,11 @@ const settings = {
   ]
 };
 
-
-
-
-
 export default ({ bannes }) => {
   return (
     <Slider {...settings}>
       {data.map(banner => (
-        <Card >
+        <Card className="mt-1">
           <CardActionArea>
             <img src={banner.foto} className={styles.banner} />
           </CardActionArea>

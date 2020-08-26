@@ -67,7 +67,7 @@ const Index = () => {
       <Container>
         <Title title={promotionsTitle} />
         <div class="flex flex-wrap -mx-2">
-          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
         </div>
         <Adverts banner={"banner3.jpg"} />
       </Container>
@@ -75,7 +75,7 @@ const Index = () => {
       <Container>
         <Title title="Ofertas especiais" />
         <div class="flex flex-wrap -mx-2">
-          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
         </div>
         <Adverts banner={"banner4.png"} banner2={"banner5.png"} />
       </Container>
@@ -85,7 +85,7 @@ const Index = () => {
           <Title title="Genéricos" />
         </div>
         <div class="flex flex-wrap -mx-2">
-          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
+          {promotions.map(product => <div key={product.nome} class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/5 px-2"><Product product={product} addItemCart={addItemCart} />  </div>)}
         </div>
       </Container>
 

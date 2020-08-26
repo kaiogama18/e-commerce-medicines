@@ -1,9 +1,7 @@
 @import '../../styles/style.scss';
 
 .categories{
-    color:  $neutralLighter;
+    color: $neutralLightest;
     background-color: $primary;
-    .text{
-        color:  $neutralLighter;
-    }
+    cursor: pointer;
 }
