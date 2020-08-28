@@ -36,7 +36,6 @@ export default ({ product, addItemCart }) => {
                         </Grid>
                         <Typography variant="subtitle2">ou 2x de {(product.preco)/2} sem juros</Typography>
 
-
                         <Grid container wrap="nowrap" alignItems="center" justify="center">
                             <Grid item xs>
                                 <Rating size="small" value={value} readOnly />
@@ -45,12 +44,6 @@ export default ({ product, addItemCart }) => {
                                 <Typography noWrap className="text-gray-600" variant="subtitle2" component="h2">({product.quantidade})</Typography>
                             </Grid>
                         </Grid>
-
-
-
-
-
-
                     </CardContent>
                 </CardActionArea>
             </Link>
