@@ -1,18 +1,15 @@
+import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List, ListItem, ListItemAvatar, Divider } from "@material-ui/core";
 import Rota from "../../Routes/Rota";
 import styles from "./Search.module.scss"
 import { useEffect, useState, Fragment } from "react"
 import SearchIcon from '@material-ui/icons/Search';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Router from "next/router";
-
-
-import { TextField, CircularProgress, InputAdornment, Avatar, ListItemText, List, ListItem, ListItemAvatar, Divider } from "@material-ui/core";
+import { Breakpoint } from "react-socks";
 
 export const Details = (value) => {
-  // console.log(JSON.stringify(value, null, 2))
   Router.push('/details?name=' + value.nome);
 };
-
 
 function Search() {
   const route = '/produto/consulta';
@@ -50,7 +47,7 @@ function Search() {
 
 
   return (
-    <>
+    <Breakpoint medium up>
       <Autocomplete
         value={value}
         open={open}
@@ -108,13 +105,11 @@ function Search() {
             </ListItem>
             <Divider />
           </List>
-
         )
-
         }
       />
       {value !== null ? Details(value) : null}
-    </>
+    </Breakpoint>
   );
 }
 
