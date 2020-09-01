@@ -15,7 +15,6 @@ export default () => {
         setState({ ...state, [anchor]: open });
     };
 
-
     const list = (anchor) => (
         <div
             className={styles.drawer}
@@ -30,7 +29,8 @@ export default () => {
                     <ListItemAvatar>
                         <Avatar alt={'option.nome'} src="/img/no-photo.svg" className="p-1" />
                     </ListItemAvatar>
-                    <ListItemText primary={'option.nome'} secondary={"R$" + 'option.preco'} />
+                    <ListItemText primary={'Centrum Omega 30 Comprimidos'} secondary={"R$" + '30.10'} />
+                    {/* <ListItemText primary={'option.nome'} secondary={"R$" + 'option.preco'} /> */}
                     <ListItemSecondaryAction>
                         <IconButton edge="end" aria-label="delete">
                             <DeleteIcon />
@@ -38,8 +38,6 @@ export default () => {
                     </ListItemSecondaryAction>
                 </ListItem>
             </List>
-
-
         </div>
 
     )
@@ -65,13 +63,7 @@ export default () => {
             </Drawer>
         </>
     ))
-
-
-
 }
-
-
-
 
 function Title(props) {
     return <><Typography className="text-blue-900 uppercase" variant="h6" style={{ fontWeight: 500 }} > {props.title} </Typography> <Divider /></>
