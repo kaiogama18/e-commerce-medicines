@@ -1,5 +1,3 @@
-
-
 E-commerce-medicines
 ======================
 
