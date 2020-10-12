@@ -46,6 +46,3 @@ License and is available for free.
 ## Links
 
 * [Web site](https:buritech.com.br)
-
-
-[(Back to top)](#table-of-contents)
