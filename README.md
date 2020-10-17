@@ -42,7 +42,3 @@ $ yarn start
 **Wedo Market** [MIT licensed](./LICENSE)
 
 License and is available for free.
-
-## Links
-
-* [Web site](https:buritech.com.br)
