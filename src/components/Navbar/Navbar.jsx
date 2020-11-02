@@ -1,7 +1,7 @@
 import { Breakpoint } from 'react-socks';
 import Link from 'next/link';
 import { Search } from '..';
-import { Badge, Grid, Typography, Container, Divider, Button, AppBar, Toolbar, CardMedia, Paper, Tooltip, } from '@material-ui/core';
+import { Badge, Grid, Container, AppBar, Toolbar, CardMedia, Paper, Tooltip, } from '@material-ui/core';
 
 import styles from "./Navbar.module.scss"
 import NavLogin from '../NavLogin/NavLogin';
