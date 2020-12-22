@@ -37,6 +37,10 @@ $ yarn dev
 $ yarn start
 ```
 
+```bash
+$ yarn develop
+```
+
 ## License
 
 **Wedo Market** [MIT licensed](./LICENSE)
