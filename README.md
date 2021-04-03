@@ -1,5 +1,5 @@
 
-# Oficial Link E-commerce-medicines: https://wedo-market.herokuapp.com/
+# E-commerce-medicines: https://wedo-market.herokuapp.com/
 ======================
 
 ### Contributors
