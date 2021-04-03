@@ -1,6 +1,6 @@
 
 # E-commerce-medicines: https://wedo-market.herokuapp.com/
-======================
+
 
 ### Contributors
 This project exists thanks to all the people who contribute. 
