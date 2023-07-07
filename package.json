@@ -89,7 +89,7 @@
     "pure-react-carousel": "^1.27.0",
     "react-responsive-carousel": "^3.2.4",
     "react-socks": "^2.1.0",
-    "stylelint": "^13.3.2",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"
   }
